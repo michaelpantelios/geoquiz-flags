@@ -119,6 +119,12 @@ import {Philippines} from "./flagClasses/Philippines";
 import {Poland} from "./flagClasses/Poland";
 import {Portugal} from "./flagClasses/Portugal";
 import {Qatar} from "./flagClasses/Qatar";
+import {Romania} from "./flagClasses/Romania";
+import {Russia} from "./flagClasses/Russia";
+import {Rwanda} from "./flagClasses/Rwanda";
+import {SaintKittsAndNevis} from "./flagClasses/SaintKittsAndNevis";
+import {SaintLucia} from "./flagClasses/SaintLucia";
+import {Samoa} from "./flagClasses/Samoa";
 
 export class Game extends PIXI.Container {
     static get  FLAG_WIDTH() {  return 2388; }
@@ -506,6 +512,24 @@ export class Game extends PIXI.Container {
                     break;
                 case "Qatar":
                     flag = new Qatar(data);
+                    break;
+                case "Romania":
+                    flag = new Romania(data);
+                    break;
+                case "Russia":
+                    flag = new Russia(data);
+                    break;
+                case "Rwanda":
+                    flag = new Rwanda(data);
+                    break;
+                case "Saint Kitt And Nevis":
+                    flag = new SaintKittsAndNevis(data);
+                    break;
+                case "Saint Lucia":
+                    flag = new SaintLucia(data);
+                    break;
+                case "Samoa":
+                    flag = new Samoa(data);
                     break;
             }
 

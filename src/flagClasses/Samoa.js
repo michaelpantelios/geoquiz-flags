@@ -1,36 +1,40 @@
-import * as PIXI from "pixi.js"
+import * as PIXI from "pixi.js";
 import {Utils} from "../Utils";
+import samoa_amblem from "../assets/images/flagSpecials/samoa/samoa_emblem.png";
 
-export class Romania extends PIXI.Container{
+export class Samoa extends PIXI.Container {
     constructor(data) {
         super();
 
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
+        this._scale = parseFloat(data.scale.toString());
 
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
-        this._areaWidth = this._flagWidth * 0.33;
+
+        this.area2Width = 0.5 * this._flagWidth;
+        this.area2Height = 0.5 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //green
-        this.area3Color = parseInt(this._flagData["area3"]); //red
+        this.area1Color = parseInt(this._flagData["area1"]); // green
+        this.area2Color = parseInt(this._flagData["area2"]); //white
 
         //wrong colors
-        this.wrongColor1 = 0x1d921d;
-        this.wrongColor2 = 0xffffff;
-        this.wrongColor3 = 0xe38803;
+        this.wrongColor1 = 0xe38803;
+        this.wrongColor2 = 0xffff00;
+        this.wrongColor3 = 0xff00ff;
+        this.wrongColor4 = 0x00ff00;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
         this.area1.name = "area1";
-        this.paintFlagArea(this.area1.name, this._solved ? this.area1Color : 0xbbbbbb)
+        this.addChild(this.area1);
+        this.paintFlagArea(this.area1.name, this._solved ? this.area1Color : 0xbbbbbb);
         this.area1.on("pointertap", () =>{
             this.emit(Utils.FLAG_AREA_PICKED, this.area1.name);
-        });
-        this.addChild(this.area1);
+        })
 
         this.area2 = new PIXI.Graphics();
         this.area2.interactive = true;
@@ -41,24 +45,26 @@ export class Romania extends PIXI.Container{
             this.emit(Utils.FLAG_AREA_PICKED, this.area2.name);
         });
 
-        this.area3 = new PIXI.Graphics();
-        this.area3.interactive = true;
-        this.area3.name = "area3";
+        this.area3 = new PIXI.Sprite.from(samoa_amblem);
+        this.area3.scale.set(this._scale);
+        this.area3.visible = false;
         this.addChild(this.area3);
-        this.paintFlagArea(this.area3.name, this._solved ? this.area3Color : 0xbbbbbb)
-        this.area3.on("pointertap", () =>{
-            this.emit(Utils.FLAG_AREA_PICKED, this.area3.name);
-        });
+        setTimeout(()=>{
+            this.area3.x = this.area2Width / 2 - this.area3.width / 2;
+            this.area3.y = this.area2Height / 2 - this.area3.height / 2;
+            this.area3.visible = true;
+        }, 1000);
+
     }
 
     getColorsForPickers(){
         return [
             this.area1Color,
             this.area2Color,
-            this.area3Color,
             this.wrongColor1,
             this.wrongColor2,
-            this.wrongColor3
+            this.wrongColor3,
+            this.wrongColor4
         ];
     }
 
@@ -68,20 +74,14 @@ export class Romania extends PIXI.Container{
             case this.area1.name:
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
-                this.area1.drawRect(0, 0, this._areaWidth,  this._flagHeight);
+                this.area1.drawRect(0, 0, this._flagWidth, this._flagHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
-                this.area2.drawRect(this._areaWidth, 0, this._areaWidth, this._flagHeight);
+                this.area2.drawRect(0, 0, this.area2Width, this.area2Height);
                 this.area2.endFill();
-                break;
-            case this.area3.name:
-                this.area3.lineStyle(this._lineWidth, 0x000000, 1);
-                this.area3.beginFill(color);
-                this.area3.drawRect(2 * this._areaWidth, 0, this._areaWidth, this._flagHeight);
-                this.area3.endFill();
                 break;
         }
     }
@@ -89,6 +89,4 @@ export class Romania extends PIXI.Container{
     getFlagCountryName(){
         return this._flagData["country"];
     }
-
-
 }

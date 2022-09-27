@@ -1,6 +1,42 @@
 {
   "flags" : [
     {
+      "country": "Samoa",
+      "area1": "0xcb162c",
+      "area2": "0x042e7c",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Saint Lucia",
+      "area1": "0x6acffc",
+      "area2": "0xffffff",
+      "area3": "0x000000",
+      "area4": "0xfdcc2f",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Saint Kitt And Nevis",
+      "area1": "0x6ad0fd",
+      "area2": "0xffffff",
+      "area3": "0x000000",
+      "area4": "0xfecd2f",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Rwanda",
+      "area1": "0x1ba2dc",
+      "area2": "0xf9d02f",
+      "area3": "0x235f3e",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Russia",
+      "area1": "0xFFFFFF",
+      "area2": "0x0032A0",
+      "area3": "0xDA291C",
+      "activeAreas" : 3
+    },
+    {
       "country": "Romania",
       "area1": "0x002B7F",
       "area2": "0xFCD116",
