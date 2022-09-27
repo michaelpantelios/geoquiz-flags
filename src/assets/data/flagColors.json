@@ -1,0 +1,771 @@
+{
+  "flags" : [
+    {
+      "country": "Romania",
+      "area1": "0x002B7F",
+      "area2": "0xFCD116",
+      "area3": "0xCE1126",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Qatar",
+      "area1": "0xffffff",
+      "area2": "0x7f1d36"
+    },
+    {
+      "country": "Portugal",
+      "area1": "0x0a650c",
+      "area2": "0xfc0d1b",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Poland",
+      "area1": "0xffffff",
+      "area2": "0xca2e3f",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Philippines",
+      "area1": "0x073ca5",
+      "area2": "0xcb162c",
+      "area3": "0xffffff",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Peru",
+      "area1": "0xd7172b",
+      "area2": "0xffffff",
+      "area3": "0xd7172b",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Paraguay",
+      "area1": "0xd22d27",
+      "area2": "0xffffff",
+      "area3": "0x073ca5",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Panama",
+      "area1": "0xffffff",
+      "area2": "0xd80916",
+      "area3": "0x0515a8",
+      "area4": "0xffffff",
+      "activeAreas" : 4
+    },
+    {
+      "country": "PapuaNewGuinea",
+      "area1": "0xfd0d1c",
+      "area2": "0x000000",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Pakistan",
+      "area1": "0xffffff",
+      "area2": "0x125812",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Palau",
+      "area1": "0x4498f8",
+      "area2": "0xfffe55",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Oman",
+      "area1": "0xffffff",
+      "area2": "0xed3032",
+      "area3": "0x128e2c",
+      "area4": "0xec3031",
+      "activeAreas" : 4
+    },
+    {
+      "country": "Norway",
+      "area1": "0xab2431",
+      "area2": "0xab2431",
+      "area3": "0xab2431",
+      "area4": "0xab2431",
+      "area5": "0xffffff",
+      "area6": "0x061958",
+      "activeAreas" : 5
+    },
+    {
+      "country": "Nigeria",
+      "area1": "0x008753",
+      "area2": "0xFFFFFF",
+      "area3": "0x008753"
+    },
+    {
+      "country": "Niger",
+      "area1": "0xd05c27",
+      "area2": "0xFFFFFF",
+      "area3": "0x4fae42",
+      "area4": "0xd05c27"
+    },
+    {
+      "country": "Netherlands",
+      "area1": "0xA91F32",
+      "area2": "0xFFFFFF",
+      "area3": "0x1E4785"
+    },
+    {
+      "country": "Nauru",
+      "area1": "0x03246e",
+      "area2": "0xfeb12e",
+      "area3": "0x03246e"
+    },
+    {
+      "country": "Myanmar",
+      "area1": "0xfdca2f",
+      "area2": "0x3bb03c",
+      "area3": "0xe72b3e"
+    },
+    {
+      "country": "Namimbia",
+      "area1": "0x3863a0",
+      "area2": "0x3da01b",
+      "area3": "0xffffff",
+      "area4": "0xc50813"
+    },
+    {
+      "country": "Mozambique",
+      "area1": "0x159918",
+      "area2": "0xffffff",
+      "area3": "0xfec92e",
+      "area4": "0x000000",
+      "area5": "0xfc0d1b",
+      "activeAreas" : 5
+    },
+    {
+      "country": "Mongolia",
+      "area1": "0xd82438",
+      "area2": "0x0e68b1",
+      "area3": "0xd82438",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Monaco",
+      "area1": "0xff0000",
+      "area2": "0xffffff",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Moldova",
+      "area1": "0x063599",
+      "area2": "0xfedd32",
+      "area3": "0xdb241f",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Mexico",
+      "area1": "0x0b6848",
+      "area2": "0xffffff",
+      "area3": "0xcc172d",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Mauritius",
+      "area1": "0xEB2436",
+      "area2": "0x131A6D",
+      "area3": "0xFFD600",
+      "area4": "0x00A650",
+      "activeAreas" : 4
+    },
+    {
+      "country": "Mauritania",
+      "area1": "0xcb2d41",
+      "area2": "0x096134",
+      "area3": "0xcb2d41",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Malta",
+      "area1": "0xffffff",
+      "area2": "0xf22834",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Mali",
+      "area1": "0x14B53A",
+      "area2": "0xFCD116",
+      "area3": "0xCE1126",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Maldives",
+      "area1": "0xf22834",
+      "area2": "0x0f7d3d",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Malawi",
+      "area1": "0x000000",
+      "area2": "0xf11a1d",
+      "area3": "0x27863f",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Madagascar",
+      "area1": "0xffffff",
+      "area2": "0xe74d3c",
+      "area3": "0x377e3f",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Luxembourg",
+      "area1": "0xEF3340",
+      "area2": "0xFFFFFF",
+      "area3": "0x00A3E0",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Lithuania",
+      "area1": "0xf3be42",
+      "area2": "0x2d6946",
+      "area3": "0xb13331",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Liechtenstein",
+      "area1": "0x042e7d",
+      "area2": "0xcb162c",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Libya",
+      "area1": "0xe40b21",
+      "area2": "0x000000",
+      "area3": "0x2b9d4a",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Lebanon",
+      "area1": "0xeb1c2a",
+      "area2": "0xffffff",
+      "area3": "0xeb1c2a",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Latvia",
+      "area1": "0x94363a",
+      "area2": "0xffffff",
+      "area3": "0x94363a",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Laos",
+      "area1": "0xbe2a2c",
+      "area2": "0x0a2364",
+      "area3": "0xbe2a2c",
+      "area4": "0xffffff",
+      "activeAreas" : 4
+    },
+    {
+      "country": "Kuwait",
+      "area1": "0x347843",
+      "area2": "0xffffff",
+      "area3": "0xbd2d2f",
+      "area4": "0x010000",
+      "activeAreas" : 4
+    },
+    {
+      "country": "Kenya",
+      "area1": "0x000000",
+      "area2": "0xffffff",
+      "area3": "0x0a650c",
+      "area4": "0xb90711",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Jordan",
+      "area1": "0x000000",
+      "area2": "0xffffff",
+      "area3": "0x149717",
+      "area4": "0xfc0d1b"
+    },
+    {
+      "country": "Japan",
+      "area1": "0xffffff",
+      "area2": "0xad2330",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Jamaica",
+      "area1": "0xf4bc44",
+      "area2": "0x33764b",
+      "area3": "0x000000",
+      "area4": "0x33764b",
+      "area5": "0x000000",
+      "activeAreas" : 5
+    },
+    {
+      "country": "Italy",
+      "area1": "0x008C45",
+      "area2": "0xF4F5F0",
+      "area3": "0xCD212A",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Ireland",
+      "area1": "0x169B62",
+      "area2": "0xffffff",
+      "area3": "0xFF883E",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Iran",
+      "area1": "0x2b9d44",
+      "area2": "0xffffff",
+      "area3": "0xf22834",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Iraq",
+      "area1": "0xcb162c",
+      "area2": "0xffffff",
+      "area3": "0x000000",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Indonesia",
+      "area1": "0xFF0000",
+      "area2": "0xffffff",
+      "activeAreas" : 2
+    },
+    {
+      "country": "India",
+      "area1": "0xfd9941",
+      "area2": "0xffffff",
+      "area3": "0x1c8718",
+      "activeAreas" : 5
+    },
+    {
+      "country": "Iceland",
+      "area1": "0x02529C",
+      "area2": "0x02529C",
+      "area3": "0x02529C",
+      "area4": "0x02529C",
+      "area5": "0xffffff",
+      "area6": "0xDC1E35",
+      "activeAreas" : 5
+    },
+    {
+      "country": "Hungary",
+      "area1": "0xCE2939",
+      "area2": "0xffffff",
+      "area3": "0x477050",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Honduras",
+      "area1": "0x2bc3dd",
+      "area2": "0xffffff",
+      "area3": "0x2bc3dd",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Haiti",
+      "area1": "0x05279c",
+      "area2": "0xd01739",
+      "activeAreas" : 2
+    },
+    {
+      "country": "Guyana",
+      "area1": "0x3d921b",
+      "area2": "0xffffff",
+      "area3": "0xfedc33",
+      "area4": "0x000000",
+      "area5": "0xdb241f",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Guinea",
+      "area1": "0xCE1126",
+      "area2": "0xFCD116",
+      "area3": "0x009460",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Guinea Bissau",
+      "area1": "0xcc172d",
+      "area2": "0xfbd036",
+      "area3": "0x169d4d",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Guatemala",
+      "area1": "0x4d98cd",
+      "area2": "0xffffff",
+      "area3": "0x4d98cd",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Grenada",
+      "area1": "0xcb162c",
+      "area2": "0xfbd036",
+      "area3": "0x0e795e",
+      "area4": "0xfbd036",
+      "area5": "0x0e795e",
+      "activeAreas" : 5
+    },
+    {
+      "country": "Ghana",
+      "area1": "0xcc172d",
+      "area2": "0xfacf35",
+      "area3": "0x0b6a40",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Germany",
+      "area1": "0x000000",
+      "area2": "0xFF0000",
+      "area3": "0xFFCC00",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Gambia",
+      "area1": "0xfc0d1c",
+      "area2": "0xffffff",
+      "area3": "0x159818",
+      "area4": "0x031196",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Gabon",
+      "area1": "0x469d66",
+      "area2": "0xf6d349",
+      "area3": "0x4874bf"
+    },
+    {
+      "country": "France",
+      "area1": "0x0055A4",
+      "area2": "0xFFFFFF",
+      "area3": "0xEF4135"
+    },
+    {
+      "country": "Finland",
+      "area1": "0xffffff",
+      "area2": "0xffffff",
+      "area3": "0xffffff",
+      "area4": "0xffffff",
+      "area5": "0x0e2a67",
+      "activeAreas" : 5
+    },
+    {
+      "country": "Ethiopia",
+      "area1": "0x2f8b1a",
+      "area2": "0xfdc539",
+      "area3": "0xec2525"
+    },
+    {
+      "country": "Esthonia",
+      "area1": "0x3171c9",
+      "area2": "0x000000",
+      "area3": "0xffffff"
+    },
+    {
+      "country": "Eritrea",
+      "area1": "0x2b9c4a",
+      "area2": "0xbc092d",
+      "area3": "0xb6d8f3"
+    },
+    {
+      "country": "Equatorial Guinea",
+      "area1": "0x419918",
+      "area2": "0xffffff",
+      "area3": "0xe02424",
+      "area4": "0x1175cb"
+    },
+    {
+      "country": "El Salvador",
+      "area1": "0x154aac",
+      "area2": "0xffffff",
+      "area3": "0x154aac"
+    },
+    {
+      "country": "Egypt",
+      "area1": "0xcb162c",
+      "area2": "0xffffff",
+      "area3": "0x000000"
+    },
+    {
+      "country": "Ecuador",
+      "area1": "0xfee633",
+      "area2": "0x031b8b",
+      "area3": "0xd7091d",
+      "activeAreas" : 3
+    },
+    {
+      "country": "North Korea",
+      "area1": "0x3f5896",
+      "area2": "0xffffff",
+      "area3": "0x3f5896",
+      "area4": "0xc40813",
+      "activeAreas" : 3
+    },
+    {
+      "country": "Dominican Republic",
+      "area1": "0x063599",
+      "area2": "0xd32b23",
+      "area3": "0xd32b23",
+      "area4": "0x063599",
+      "area5": "0xffffff"
+    },
+    {
+      "country": "Djibouti",
+      "area1": "0x699cfc",
+      "area2": "0x1fca23",
+      "area3": "0xfffefe"
+    },
+    {
+      "country": "Denmark",
+      "area1": "0xb72831",
+      "area2": "0xb72831",
+      "area3": "0xb72831",
+      "area4": "0xb72831",
+      "area5": "0xffffff"
+    },
+    {
+      "country": "Czech Republic",
+      "area1": "0xffffff",
+      "area2": "0xc62d25",
+      "area3": "0x1d427b"
+    },
+    {
+      "country": "Cuba",
+      "area1": "0x0f56ec",
+      "area2": "0xffffff",
+      "area3": "0x0f56ec",
+      "area4": "0xffffff",
+      "area5": "0x0f56ec",
+      "area6": "0xea0b18"
+    },
+    {
+      "country": "Croatia",
+      "area1": "0xfc0d1b",
+      "area2": "0xffffff",
+      "area3": "0x192094"
+    },
+    {
+      "country": "Costa Rica",
+      "area1": "0x0516b1",
+      "area2": "0xffffff",
+      "area3": "0xd60915",
+      "area4": "0xffffff",
+      "area5": "0x0516b1"
+    },
+    {
+      "country": "Congo",
+      "area1": "0x1783fc",
+      "area2": "0x1783fc",
+      "area3": "0xf6d436",
+      "area4": "0xcc1629"
+    },
+    {
+      "country": "Comoros",
+      "area1": "0xfffd38",
+      "area2": "0xffffff",
+      "area3": "0xbc082c",
+      "area4": "0x3d5ca1",
+      "area5": "0x2b9d4a"
+    },
+    {
+      "country": "Colombia",
+      "area1": "0xFCD116",
+      "area2": "0x003893",
+      "area3": "0xCE1126"
+    },
+    {
+      "country": "Chile",
+      "area1": "0x073da4",
+      "area2": "0xffffff",
+      "area3": "0xd32e28"
+    },
+    {
+      "country": "Chad",
+      "area1": "0x092060",
+      "area2": "0xf7ce46",
+      "area3": "0xb72733"
+    },
+    {
+      "country": "Central African Republic",
+      "area1": "0x0a23fa",
+      "area2": "0xffffff",
+      "area3": "0x159918",
+      "area4": "0xfffd37",
+      "area5": "0x0a23fa",
+      "area6": "0xffffff",
+      "area7": "0x159918",
+      "area8": "0xfffd37",
+      "area9": "0xfc0d1b"
+    },
+    {
+      "country": "Cameroon",
+      "area1": "0x0f795e",
+      "area2": "0xcc172d",
+      "area3": "0xfbd036"
+    },
+    {
+      "country": "Cambodia",
+      "area1": "0x09339e",
+      "area2": "0xde0b2d",
+      "area3": "0x09339e"
+    },
+    {
+      "country": "Ivory Coast",
+      "area1": "0xe78632",
+      "area2": "0xffffff",
+      "area3": "0x469d65"
+    },
+    {
+      "country": "Burkina Faso",
+      "area1": "0xdb0a16",
+      "area2": "0x3a9f1a"
+    },
+    {
+      "country": "Bosniaherzegovina",
+      "area1": "0x031096",
+      "area2": "0x031096",
+      "area3": "0xfecb2e"
+    },
+    {
+      "country": "Bulgaria",
+      "area1": "0xffffff",
+      "area2": "0x429570",
+      "area3": "0xc63621"
+    },
+    {
+      "country": "Brunei",
+      "area1": "0xf7df38",
+      "area2": "0xf7df38",
+      "area3": "0xffffff",
+      "area4": "0x000000"
+    },
+    {
+      "country": "Brazil",
+      "area1": "0x2a9d49",
+      "area2": "0xf8e435"
+    },
+    {
+      "country": "Bolivia",
+      "area1": "0xd32d27",
+      "area2": "0xfede32",
+      "area3": "0x0e7837"
+    },
+    {
+      "country": "Bhutan",
+      "area1": "0xfed43b",
+      "area2": "0xfc4f26"
+    },
+    {
+      "country": "Angola",
+      "area1": "0xfc0d1b",
+      "area2": "0x000000"
+    },
+    {
+      "country": "Benin",
+      "area1": "0x3c8655",
+      "area2": "0xf6d449",
+      "area3": "0xd63134"
+    },
+    {
+      "country": "Belize",
+      "area1": "0xcc172d",
+      "area2": "0x074185",
+      "area3": "0xcc172d"
+    },
+    {
+      "country": "Belgium",
+      "area1": "0x000000",
+      "area2": "0xf8dc50",
+      "area3": "0xdd4446"
+    },
+    {
+      "country": "Belarus",
+      "area1": "0xb0060f",
+      "area2": "0x459d1a"
+    },
+    {
+      "country": "Barbados",
+      "area1": "0x03297c",
+      "area2": "0xfdc53c",
+      "area3": "0x03297c"
+    },
+    {
+      "country": "Bangladesh",
+      "area1": "0x006b50",
+      "area2": "0xee2e44"
+    },
+    {
+      "country": "Bahamas",
+      "area1": "0x00778B",
+      "area2": "0xFFC72C",
+      "area3": "0x00778B",
+      "area4": "0x000000"
+    },
+    {
+      "country": "Azerbaijan",
+      "area1": "0x1eb9e2",
+      "area2": "0xeb2d3f",
+      "area3": "0x439b3b"
+    },
+    {
+      "country": "Austria",
+      "area1": "0xb82831",
+      "area2": "0xffffff",
+      "area3": "0xb82831"
+    },
+    {
+      "country": "Andora",
+      "area1": "0x0421a5",
+      "area2": "0xfdde32",
+      "area3": "0xcd163d"
+    },
+    {
+      "country": "Burundi",
+      "area1": "0xda3832",
+      "area2": "0xf49a35a",
+      "area3": "0xda3832",
+      "area4": "0xf49a35a",
+      "area5": "0xffffff"
+    },
+    {
+      "country": "Bahrain",
+      "area1": "0xffffff",
+      "area2": "0xff0000"
+    },
+    {
+      "country": "Antigua and Barbuda",
+      "area1": "0xdf0a16",
+      "area2": "0xdf0a16",
+      "area3": "0x000000",
+      "area4": "0x1167fa",
+      "area5": "0xffffff"
+    },
+    {
+        "country": "Armenia",
+        "area1": "0xae242e",
+        "area2": "0x42599e",
+        "area3": "0xdbb065"
+    },
+    {
+      "country": "Argentina",
+      "area1": "0x9cd1f1",
+      "area2": "0xfffeff",
+      "area3": "0x9cd1f1"
+    },
+    {
+        "country": "Afghanistan",
+        "area1": "0x000000",
+        "area2": "0x4d33739",
+        "area3": "0x469652"
+    },
+    {
+      "country": "Botswana",
+      "area1": "0x55baec",
+      "area2": "0x55baec",
+      "area3": "0xffffff",
+      "area4": "0x000000"
+    }
+  ]
+}
