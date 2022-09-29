@@ -7,24 +7,15 @@ export class Colombia extends PIXI.Container {
 
         this._flagWidth = data.width;
         this._flagHeight = data.height;
-
         this._solved = data.solved;
         this._lineWidth = data.lineWidth;
         this._flagData = data.flagData;
-
-        // console.log("flag data: ",data);
-        // console.log(`flag this.width = ${data.width}`);
-        // console.log(`flag this.height = ${data.height}`);
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
         this.area1Color = parseInt(this._flagData["area1"]); // red
         this.area2Color = parseInt(this._flagData["area2"]); //blue
         this.area3Color = parseInt(this._flagData["area3"]); //yellow
-
-        //wrong colors
-        this.wrongColor1 = 0x000000;
-        this.wrongColor2 = 0x3a9f1a;
-        this.wrongColor3 = 0xffffff;
 
         this._areaHeight = this._flagHeight * 0.333;
 
@@ -60,11 +51,8 @@ export class Colombia extends PIXI.Container {
         return [
             this.area1Color,
             this.area2Color,
-            this.area3Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area3Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

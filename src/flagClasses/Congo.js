@@ -12,6 +12,7 @@ export class Congo extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._area3_0 = new PIXI.Point(0,0.75 * this._flagHeight);
         this._area3_1 = new PIXI.Point(0.938 * this._flagWidth,0);
@@ -33,12 +34,6 @@ export class Congo extends PIXI.Container {
         this.area2Color = parseInt(this._flagData["area2"]); // cyan
         this.area3Color = parseInt(this._flagData["area3"]); // cyan
         this.area4Color = parseInt(this._flagData["area4"]); // cyan
-
-        //wrong colors
-        this.wrongColor1 = 0xff9100;
-        this.wrongColor2 = 0xffffff;
-        this.wrongColor3 = 0x3a9f1a;
-        this.wrongColor4 = 0x000000;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -86,12 +81,8 @@ export class Congo extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area4Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area4Color
+        ].concat(this.wrongColors);
     }
 
 

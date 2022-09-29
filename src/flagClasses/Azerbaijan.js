@@ -12,18 +12,14 @@ export class Azerbaijan extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
-        
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+
         this._areaHeight = this._flagHeight * 0.333;
 
         //correct colors
         this.area1Color = parseInt(this._flagData["area1"]); // cyan
         this.area2Color = parseInt(this._flagData["area2"]); //white
         this.area3Color = parseInt(this._flagData["area3"]); //cyan
-
-        //wrong colors
-        this.wrongColor1 = 0xf6224e;
-        this.wrongColor2 = 0x72f622;
-        this.wrongColor3 = 0xf68522;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -67,11 +63,8 @@ export class Azerbaijan extends PIXI.Container {
         return [
             this.area1Color,
             this.area2Color,
-            this.area3Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area3Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

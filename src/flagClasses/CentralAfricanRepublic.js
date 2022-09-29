@@ -9,10 +9,12 @@ export class CentralAfricanRepublic extends PIXI.Container {
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
         this._scale = parseFloat(data.scale.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+
         this._horizHeight = this._flagHeight * 0.25;
         this._verticalWidth = this._flagWidth * 0.19;
         this._verticalX = this._flagWidth / 2 - this._verticalWidth / 2;
@@ -28,9 +30,6 @@ export class CentralAfricanRepublic extends PIXI.Container {
         this.area7Color = parseInt(this._flagData["area7"]); // green
         this.area8Color = parseInt(this._flagData["area8"]); // yellow
         this.area9Color = parseInt(this._flagData["area9"]); // red
-
-        //wrong colors
-        this.wrongColor1 = 0x000000;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -131,9 +130,8 @@ export class CentralAfricanRepublic extends PIXI.Container {
             this.area2Color,
             this.area3Color,
             this.area4Color,
-            this.area9Color,
-            this.wrongColor1
-        ];
+            this.area9Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

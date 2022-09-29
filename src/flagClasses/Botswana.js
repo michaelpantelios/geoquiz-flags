@@ -7,10 +7,10 @@ export class Botswana extends PIXI.Container {
 
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._area1Height = 0.37 * this._flagHeight; // height of cyan areas
         this._area3Height = 0.25 * this._flagHeight; // white, non interactive
@@ -21,11 +21,6 @@ export class Botswana extends PIXI.Container {
         this.area2Color = parseInt(this._flagData["area2"]); // cyan
         this.area3Color = parseInt(this._flagData["area3"]); // cyan
         this.area4Color = parseInt(this._flagData["area4"]); // cyan
-
-        this.wrongColor1 = 0xe61e2f;
-        this.wrongColor2 = 0x3e9d07;
-        this.wrongColor3 = 0xffbb00;
-        this.wrongColor4 = 0x9400ff;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -64,12 +59,8 @@ export class Botswana extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area4Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area4Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color) {

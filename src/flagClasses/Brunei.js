@@ -12,6 +12,7 @@ export class Brunei extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._area1_0_y = 0.04 * this._flagHeight;
         this._area1_1_y = 0.49 * this._flagHeight;
@@ -27,11 +28,6 @@ export class Brunei extends PIXI.Container {
         this.area2Color = parseInt(this._flagData["area2"]); // yellow
         this.area3Color = parseInt(this._flagData["area3"]); // white
         this.area4Color = parseInt(this._flagData["area4"]); // black
-
-        //wrong colors
-        this.wrongColor1 = 0xff0000;
-        this.wrongColor2 = 0x228f19;
-        this.wrongColor3 = 0x0000ff;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -85,11 +81,8 @@ export class Brunei extends PIXI.Container {
         return [
             this.area1Color,
             this.area3Color,
-            this.area4Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area4Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

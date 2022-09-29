@@ -11,12 +11,13 @@ export class Denmark extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
-        this.area1Width = 0.32 * this._flagWidth;
-        this.area1Height = 0.40 * this._flagHeight;
-        this.area2Width = 0.57 * this._flagWidth;
-        this.area5Width = 0.109 * this._flagWidth;
-        this.area5Height = 0.1438 * this._flagHeight;
+        this.area1Width = 0.2865 * this._flagWidth;
+        this.area1Height = 0.3992 * this._flagHeight;
+        this.area2Width = 0.5695 * this._flagWidth;
+        this.area5Width = 0.1436 * this._flagWidth;
+        this.area5Height = 0.202 * this._flagHeight;
 
         //correct colors
         this.area1Color = parseInt(this._flagData["area1"]); // red
@@ -24,12 +25,6 @@ export class Denmark extends PIXI.Container {
         this.area3Color = parseInt(this._flagData["area3"]); // red
         this.area4Color = parseInt(this._flagData["area4"]); // red
         this.area5Color = parseInt(this._flagData["area5"]); // white
-
-        //wrong colors
-        this.wrongColor1 = 0x000000;
-        this.wrongColor2 = 0x3a9f1a;
-        this.wrongColor3 = 0xffff00;
-        this.wrongColor4 = 0x0000ff;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -80,12 +75,8 @@ export class Denmark extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area5Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area5Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

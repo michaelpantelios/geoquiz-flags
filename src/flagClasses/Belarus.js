@@ -9,22 +9,17 @@ export class Belarus extends PIXI.Container {
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
         this._scale = parseFloat(data.scale.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+
         this.area1Height = 0.66 * this._flagHeight;
         this.area2Height = 0.34 * this._flagHeight;
 
         //correct colors
         this.area1Color = parseInt(this._flagData["area1"]); // red
         this.area2Color = parseInt(this._flagData["area2"]); //green
-
-        //wrong colors
-        this.wrongColor1 = 0x1a5b9d;
-        this.wrongColor2 = 0x000000;
-        this.wrongColor3 = 0xfff400;
-        this.wrongColor4 = 0xffffff;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -57,12 +52,8 @@ export class Belarus extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

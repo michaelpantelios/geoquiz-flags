@@ -12,6 +12,7 @@ export class CostaRica extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._area1Height = 0.1576 * this._flagHeight;
         this._area2Height = 0.1732 * this._flagHeight;
@@ -25,11 +26,6 @@ export class CostaRica extends PIXI.Container {
         this.area3Color = parseInt(this._flagData["area3"]); // red
         this.area4Color = parseInt(this._flagData["area4"]); // white
         this.area5Color = parseInt(this._flagData["area5"]); // blue
-
-        //wrong colors
-        this.wrongColor1 = 0x000000;
-        this.wrongColor2 = 0xff9100;
-        this.wrongColor3 = 0x3a9f1a;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -92,11 +88,8 @@ export class CostaRica extends PIXI.Container {
         return [
             this.area1Color,
             this.area2Color,
-            this.area3Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area3Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

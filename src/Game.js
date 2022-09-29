@@ -125,6 +125,26 @@ import {Rwanda} from "./flagClasses/Rwanda";
 import {SaintKittsAndNevis} from "./flagClasses/SaintKittsAndNevis";
 import {SaintLucia} from "./flagClasses/SaintLucia";
 import {Samoa} from "./flagClasses/Samoa";
+import {SanMarino} from "./flagClasses/SanMarino";
+import {SaoTomePrincipe} from "./flagClasses/SaoTomePrincipe";
+import {Senegal} from "./flagClasses/Senegal";
+import {Serbia} from "./flagClasses/Serbia";
+import {Seychelles} from "./flagClasses/Seychelles";
+import {SierraLeone} from "./flagClasses/SierraLeone";
+import {Singapore} from "./flagClasses/Singapore";
+import {Slovakia} from "./flagClasses/Slovakia";
+import {Slovenia} from "./flagClasses/Slovenia";
+import {SolomonIslands} from "./flagClasses/SolomonIslands";
+import {Somalia} from "./flagClasses/Somalia";
+import {SouthAfrica} from "./flagClasses/SouthAfrica";
+import {SouthKorea} from "./flagClasses/SouthKorea";
+import {SouthSudan} from "./flagClasses/SouthSudan";
+import {Spain} from "./flagClasses/Spain";
+import {SriLanka} from "./flagClasses/SriLanka";
+import {StVincentGrenadines} from "./flagClasses/StVincentGrenadines";
+import {Suriname} from "./flagClasses/Suriname";
+import {Sudan} from "./flagClasses/Sudan";
+import {Sweden} from "./flagClasses/Sweden";
 
 export class Game extends PIXI.Container {
     static get  FLAG_WIDTH() {  return 2388; }
@@ -174,6 +194,9 @@ export class Game extends PIXI.Container {
                 "lineWidth" : 3
             };
             switch(flagData["country"]){
+                case "Afghanistan":
+                    flag = new Afghanistan(data);
+                    break;
                 case "Armenia":
                     flag = new Armenia(data);
                     break;
@@ -182,9 +205,6 @@ export class Game extends PIXI.Container {
                     break;
                 case "Antigua and Barbuda":
                     flag = new AntiguaBarbuda(data);
-                    break;
-                case "Afghanistan":
-                    flag = new Afghanistan(data);
                     break;
                 case "Bahrain":
                     flag = new Bahrain(data);
@@ -489,7 +509,7 @@ export class Game extends PIXI.Container {
                 case "Pakistan":
                     flag = new Pakistan(data);
                     break;
-                case "PapuaNewGuinea":
+                case "Papua New Guinea":
                     flag = new PapuaNewGuinea(data);
                     break;
                 case "Panama":
@@ -531,6 +551,66 @@ export class Game extends PIXI.Container {
                 case "Samoa":
                     flag = new Samoa(data);
                     break;
+                case "San Marino":
+                    flag = new SanMarino(data);
+                    break;
+                case "Sao Tome and Principe":
+                    flag = new SaoTomePrincipe(data);
+                    break;
+                case "Senegal":
+                    flag = new Senegal(data);
+                    break;
+                case "Serbia":
+                    flag = new Serbia(data);
+                    break;
+                case "Seychelles":
+                    flag = new Seychelles(data);
+                    break;
+                case "Sierra Leone":
+                    flag = new SierraLeone(data);
+                    break;
+                case "Singapore":
+                    flag = new Singapore(data);
+                    break;
+                case "Slovakia":
+                    flag = new Slovakia(data);
+                    break;
+                case "Slovenia":
+                    flag = new Slovenia(data);
+                    break;
+                case "Solomon Islands":
+                    flag = new SolomonIslands(data);
+                    break;
+                case "Somalia":
+                    flag = new Somalia(data);
+                    break;
+                case "South Africa":
+                    flag = new SouthAfrica(data);
+                    break;
+                case "South Korea":
+                    flag = new SouthKorea(data);
+                    break;
+                case "South Sudan":
+                    flag = new SouthSudan(data);
+                    break;
+                case "Spain":
+                    flag = new Spain(data);
+                    break;
+                case "Sri Lanka":
+                    flag = new SriLanka(data);
+                    break;
+                case "StVincent and Grenadines":
+                    flag = new StVincentGrenadines(data);
+                    break;
+                case "Suriname":
+                    flag = new Suriname(data);
+                    break;
+                case "Sudan":
+                    flag = new Sudan(data);
+                    break;
+                case "Sweden":
+                    flag = new Sweden(data);
+                    break;
             }
 
             flag.x = document.documentElement.clientWidth / 2 - flag.width / 2;
@@ -547,7 +627,7 @@ export class Game extends PIXI.Container {
 
         // console.log("flagColors = ");
         // console.log(this._flagsArray[this._currentFlagIndex].getColorsForPickers());
-        nextY += this._flagsArray[this._currentFlagIndex].height + 20;
+        nextY += this._appWidth / this._flagRatio + 20;
 
         this._pager = new Pager({"width" : this._appWidth, "height" : this._appWidth * 0.1});
         this._pager.on(Pager.PREVIOUS_PAGE, ()=> {
@@ -563,6 +643,7 @@ export class Game extends PIXI.Container {
 
             this.showFlag();
         })
+
         this._pager.x = this.colorPickers.x;
         this._pager.y = nextY;
         this.addChild(this._pager);

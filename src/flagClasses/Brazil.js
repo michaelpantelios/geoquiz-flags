@@ -12,6 +12,7 @@ export class Brazil extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._area2Width = 0.95 * this._flagWidth;
         this._area2Height = 0.82 * this._flagHeight;
@@ -19,12 +20,6 @@ export class Brazil extends PIXI.Container {
         //correct colors
         this.area1Color = parseInt(this._flagData["area1"]); // blue
         this.area2Color = parseInt(this._flagData["area2"]); //yellow
-
-        //wrong colors
-        this.wrongColor1 = 0x000000;
-        this.wrongColor2 = 0xffffff;
-        this.wrongColor3 = 0x0000ff;
-        this.wrongColor4 = 0xff0000;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -58,12 +53,8 @@ export class Brazil extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

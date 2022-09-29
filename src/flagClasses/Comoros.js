@@ -12,6 +12,7 @@ export class Comoros extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._area5Width = 0.58 * this._flagWidth;
         this._emblemX = 0.036 * this._flagWidth;
@@ -22,9 +23,6 @@ export class Comoros extends PIXI.Container {
         this.area3Color = parseInt(this._flagData["area3"]); //blue
         this.area4Color = parseInt(this._flagData["area4"]); //blue
         this.area5Color = parseInt(this._flagData["area5"]); //blue
-
-        //wrong colors
-        this.wrongColor1 = 0x000000;
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -89,9 +87,8 @@ export class Comoros extends PIXI.Container {
             this.area2Color,
             this.area3Color,
             this.area4Color,
-            this.area5Color,
-            this.wrongColor1
-        ];
+            this.area5Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){
