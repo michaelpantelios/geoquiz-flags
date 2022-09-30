@@ -21,15 +21,15 @@ export class CentralAfricanRepublic extends PIXI.Container {
         this._emblemPos = new PIXI.Point(0.07 * this._flagWidth, 0.023 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // blue
-        this.area2Color = parseInt(this._flagData["area2"]); // white
-        this.area3Color = parseInt(this._flagData["area3"]); // green
-        this.area4Color = parseInt(this._flagData["area4"]); // yellow
-        this.area5Color = parseInt(this._flagData["area5"]); // blue
-        this.area6Color = parseInt(this._flagData["area6"]); // white
-        this.area7Color = parseInt(this._flagData["area7"]); // green
-        this.area8Color = parseInt(this._flagData["area8"]); // yellow
-        this.area9Color = parseInt(this._flagData["area9"]); // red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // blue
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // white
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // green
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // yellow
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); // blue
+        this.area6Color = parseInt(this._flagData["correctColors"][5]["area6"]); // white
+        this.area7Color = parseInt(this._flagData["correctColors"][6]["area7"]); // green
+        this.area8Color = parseInt(this._flagData["correctColors"][7]["area8"]); // yellow
+        this.area9Color = parseInt(this._flagData["correctColors"][8]["area9"]); // red
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

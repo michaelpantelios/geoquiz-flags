@@ -16,8 +16,8 @@ export class Bangladesh extends PIXI.Container {
         this._circleRadius = this._flagHeight * 0.33;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // green
-        this.area2Color = parseInt(this._flagData["area2"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //red
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

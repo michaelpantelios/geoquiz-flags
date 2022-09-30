@@ -17,9 +17,9 @@ export class Barbados extends PIXI.Container{
         this._areaWidth = this._flagWidth * 0.333;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //green
-        this.area3Color = parseInt(this._flagData["area3"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //green
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

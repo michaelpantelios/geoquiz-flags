@@ -14,9 +14,9 @@ export class Croatia extends PIXI.Container {
         this._flagData = data.flagData;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["area3"]); //yellow
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //blue
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //yellow
 
         //wrong colors
         this.wrongColor1 = 0x3a9f1a;

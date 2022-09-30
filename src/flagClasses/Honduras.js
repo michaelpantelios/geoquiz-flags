@@ -12,19 +12,14 @@ export class Honduras extends PIXI.Container {
         this._solved = data.solved;
         this._lineWidth = data.lineWidth;
         this._flagData = data.flagData;
-
-        //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["area3"]); //yellow
-
-        //wrong colors
-        this.wrongColor1 = 0xff0000;
-        this.wrongColor2 = 0xffff00;
-        this.wrongColor3 = 0x000000;
-        this.wrongColor4 = 0x077a07;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._areaHeight = this._flagHeight * 0.333;
+
+        //correct colors
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -67,12 +62,8 @@ export class Honduras extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

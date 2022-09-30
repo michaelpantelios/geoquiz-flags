@@ -9,7 +9,6 @@ export class India extends PIXI.Container {
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
         this._scale = parseFloat(data.scale.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._areaHeight = this._flagHeight * 0.333;

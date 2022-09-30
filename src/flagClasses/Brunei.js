@@ -24,10 +24,10 @@ export class Brunei extends PIXI.Container {
         this._area2_3_y = 0.52 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // yellow
-        this.area2Color = parseInt(this._flagData["area2"]); // yellow
-        this.area3Color = parseInt(this._flagData["area3"]); // white
-        this.area4Color = parseInt(this._flagData["area4"]); // black
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

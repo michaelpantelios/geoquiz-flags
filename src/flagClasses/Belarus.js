@@ -18,8 +18,8 @@ export class Belarus extends PIXI.Container {
         this.area2Height = 0.34 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //green
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //green
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

@@ -17,9 +17,9 @@ export class Bolivia extends PIXI.Container{
         this._areaHeight = this._flagHeight * 0.33;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["area2"]); //white
-        this.area3Color = parseInt(this._flagData["area3"]); //cyan
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //cyan
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

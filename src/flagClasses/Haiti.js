@@ -12,16 +12,11 @@ export class Haiti extends PIXI.Container {
         this._solved = data.solved;
         this._lineWidth = data.lineWidth;
         this._flagData = data.flagData;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-
-        //wrong colors
-        this.wrongColor1 = 0x0f9f0f;
-        this.wrongColor2 = 0x0e0e74;
-        this.wrongColor3 = 0xffd000;
-        this.wrongColor4 = 0xffd000;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //blue
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -55,12 +50,8 @@ export class Haiti extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

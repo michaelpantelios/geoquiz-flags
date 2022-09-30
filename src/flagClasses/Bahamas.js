@@ -13,10 +13,10 @@ export class Bahamas extends PIXI.Container {
         this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); //blue
-        this.area2Color = parseInt(this._flagData["area2"]); //yellow
-        this.area3Color = parseInt(this._flagData["area3"]); //blue
-        this.area4Color = parseInt(this._flagData["area4"]); //black
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); //blue
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //yellow
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //blue
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //black
 
         this._areaHeight = this._flagHeight * 0.3333;
         this._triangleWidth = 0.5 * this._flagWidth;

@@ -18,8 +18,8 @@ export class Brazil extends PIXI.Container {
         this._area2Height = 0.82 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // blue
-        this.area2Color = parseInt(this._flagData["area2"]); //yellow
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // blue
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //yellow
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

@@ -12,18 +12,14 @@ export class Grenada extends PIXI.Container {
         this._solved = data.solved;
         this._lineWidth = data.lineWidth;
         this._flagData = data.flagData;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["area3"]); //yellow
-        this.area4Color = parseInt(this._flagData["area2"]); //blue
-        this.area5Color = parseInt(this._flagData["area3"]); //yellow
-
-        //wrong colors
-        this.wrongColor1 = 0x0000ff;
-        this.wrongColor2 = 0x000000;
-        this.wrongColor3 = 0xffffff;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //blue
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //yellow
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //blue
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //yellow
 
         this.inner1 = new PIXI.Point(0.105 * this._flagWidth,  0.14 * this._flagHeight );
         this.inner2 = new PIXI.Point(0.897 * this._flagWidth, 0.14 * this._flagHeight );
@@ -92,11 +88,8 @@ export class Grenada extends PIXI.Container {
         return [
             this.area1Color,
             this.area2Color,
-            this.area3Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area3Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

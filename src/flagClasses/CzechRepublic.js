@@ -7,17 +7,17 @@ export class CzechRepublic extends PIXI.Container {
 
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.area3Width = 0.53 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // blue
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["area3"]); //blue
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // blue
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //blue
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //blue
 
         //wrong colors
         this.wrongColor1 = 0x000000;
@@ -91,11 +91,8 @@ export class CzechRepublic extends PIXI.Container {
         return [
             this.area1Color,
             this.area2Color,
-            this.area3Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area3Color
+        ].concat(this.wrongColors);
     }
 
     getFlagCountryName(){

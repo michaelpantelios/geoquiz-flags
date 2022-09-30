@@ -16,11 +16,11 @@ export class AntiguaBarbuda extends PIXI.Container {
         this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red left
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // red right
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // black bg
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
-        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); // white
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

@@ -18,11 +18,11 @@ export class Comoros extends PIXI.Container {
         this._emblemX = 0.036 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // blue
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["area3"]); //blue
-        this.area4Color = parseInt(this._flagData["area4"]); //blue
-        this.area5Color = parseInt(this._flagData["area5"]); //blue
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // blue
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //blue
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //blue
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //blue
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //blue
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

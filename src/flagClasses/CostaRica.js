@@ -21,11 +21,11 @@ export class CostaRica extends PIXI.Container {
         this._emblemX = 0.1817 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // blue
-        this.area2Color = parseInt(this._flagData["area2"]); // white
-        this.area3Color = parseInt(this._flagData["area3"]); // red
-        this.area4Color = parseInt(this._flagData["area4"]); // white
-        this.area5Color = parseInt(this._flagData["area5"]); // blue
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // blue
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // white
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // red
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // white
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); // blue
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

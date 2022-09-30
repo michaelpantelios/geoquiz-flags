@@ -20,8 +20,8 @@ export class Bahrain extends PIXI.Container {
         this._rightStart = 0.4 * this._flagWidth;
         this._edgeHeight = 0.1 * this._flagHeight;
 
-        this.area1Color = parseInt(this._flagData["area1"]); // white
-        this.area2Color = parseInt(this._flagData["area2"]); // red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // white
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // red
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

@@ -30,10 +30,10 @@ export class Congo extends PIXI.Container {
         this._emblemPos = new PIXI.Point(0.044 * this._flagWidth, 0.06 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["area4"]); // cyan
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // cyan
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // cyan
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
