@@ -19,12 +19,9 @@ export class StVincentGrenadines extends PIXI.Container {
         this.area2Width = 0.5314 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // green
-        this.area2Color = parseInt(this._flagData["area2"]); //white
-        this.area3Color = parseInt(this._flagData["area3"]); //red
-
-        console.log("this.wrongColors = ");
-        console.log(this.wrongColors);
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

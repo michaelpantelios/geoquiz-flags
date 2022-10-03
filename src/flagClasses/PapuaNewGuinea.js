@@ -12,16 +12,11 @@ export class PapuaNewGuinea extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // green
-        this.area2Color = parseInt(this._flagData["area2"]); //white
-
-        //wrong colors
-        this.wrongColor1 = 0x0000ff;
-        this.wrongColor2 = 0x00ffff;
-        this.wrongColor3 = 0xff00ff;
-        this.wrongColor4 = 0xffffff;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -79,12 +74,8 @@ export class PapuaNewGuinea extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     getFlagCountryName(){

@@ -7,10 +7,10 @@ export class Qatar extends PIXI.Container {
 
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //flag details
         this._edgeWidth = 0.14 * this._flagWidth;
@@ -20,13 +20,8 @@ export class Qatar extends PIXI.Container {
         this._edgeWidth = 0.14 * this._flagWidth;
         this._edgeHeight = 0.0555 * this._flagHeight;
 
-        this.area1Color = parseInt(this._flagData["area1"]); // white
-        this.area2Color = parseInt(this._flagData["area2"]); // red
-
-        this.wrongColor1 = 0x0001ff;
-        this.wrongColor2 = 0x000000;
-        this.wrongColor3 = 0xffec00;
-        this.wrongColor4 = 0x009600;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -50,12 +45,8 @@ export class Qatar extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

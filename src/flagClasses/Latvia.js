@@ -10,17 +10,12 @@ export class Latvia extends PIXI.Container {
         this._solved = data.solved;
         this._lineWidth = data.lineWidth;
         this._flagData = data.flagData;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); //blue
-        this.area2Color = parseInt(this._flagData["area2"]); //yellow
-        this.area3Color = parseInt(this._flagData["area3"]); //blue
-
-        //wrong colors
-        this.wrongColor1 = 0x0000ff;
-        this.wrongColor2 = 0xffff00;
-        this.wrongColor3 = 0xffff00;
-        this.wrongColor4 = 0x00ffff;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
 
         this.area1Height = 0.39 * this._flagHeight;
         this.area2Height = 0.22 * this._flagHeight;
@@ -51,18 +46,13 @@ export class Latvia extends PIXI.Container {
         this.area3.on("pointertap", () =>{
             this.emit(Utils.FLAG_AREA_PICKED, this.area3.name);
         });
-
     }
 
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

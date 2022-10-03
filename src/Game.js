@@ -145,6 +145,15 @@ import {StVincentGrenadines} from "./flagClasses/StVincentGrenadines";
 import {Suriname} from "./flagClasses/Suriname";
 import {Sudan} from "./flagClasses/Sudan";
 import {Sweden} from "./flagClasses/Sweden";
+import {Switzerland} from "./flagClasses/Switzerland";
+import {Syria} from "./flagClasses/Syria";
+import {Palestine} from "./flagClasses/Palestine";
+import {Tajikistan} from "./flagClasses/Tajikistan";
+import {Tanzania} from "./flagClasses/Tanzania";
+import {Thailand} from "./flagClasses/Thailand";
+import {TimorLeste} from "./flagClasses/TimorLeste";
+import {Tongo} from "./flagClasses/Tongo";
+import {TrinidadTobago} from "./flagClasses/TrinidadTobago";
 
 export class Game extends PIXI.Container {
     static get  FLAG_WIDTH() {  return 2388; }
@@ -610,6 +619,33 @@ export class Game extends PIXI.Container {
                     break;
                 case "Sweden":
                     flag = new Sweden(data);
+                    break;
+                case "Switzerland":
+                    flag = new Switzerland(data);
+                    break;
+                case "Syria":
+                    flag = new Syria(data);
+                    break;
+                case "Palestine":
+                    flag = new Palestine(data);
+                    break;
+                case "Tajikistan":
+                    flag = new Tajikistan(data);
+                    break;
+                case "Tanzania":
+                    flag = new Tanzania(data);
+                    break;
+                case "Thailand":
+                    flag = new Thailand(data);
+                    break;
+                case "East Timor":
+                    flag = new TimorLeste(data);
+                    break;
+                case "Tongo":
+                    flag = new Tongo(data);
+                    break;
+                case "Trinidad and Tobago":
+                    flag = new TrinidadTobago(data);
                     break;
             }
 

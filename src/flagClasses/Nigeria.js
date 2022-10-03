@@ -12,11 +12,12 @@ export class Nigeria extends PIXI.Container{
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
         this._areaWidth = this._flagWidth * 0.33;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //green
-        this.area3Color = parseInt(this._flagData["area3"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
 
         //wrong colors
         this.wrongColor1 = 0x00ff00;
@@ -55,12 +56,8 @@ export class Nigeria extends PIXI.Container{
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

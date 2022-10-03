@@ -1,698 +1,972 @@
 {
   "flags" : [
     {
+      "id" : "1",
+      "country": "Trinidad and Tobago",
+      "correctColors": [
+        { "area1": "0xc9303a" },
+        { "area2": "0xc9303a" },
+        { "area3": "0xffffff" },
+        { "area4": "0x000000" }
+      ],
+      "excludedAreas" : ["area3"],
+      "wrongColors" : ["0x0000ff", "0xffff00", "0x00ffff"]
+    },
+    {
+      "id" : "1",
+      "country": "Tongo",
+      "correctColors": [
+        { "area1": "0x1b8514" },
+        { "area2": "0xfee132" },
+        { "area3": "0x1b8514" },
+        { "area4": "0xfee132" },
+        { "area5": "0x1b8514" },
+        { "area6": "0xd60a16" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
+    },
+    {
+      "id" : "1",
+      "country": "East Timor",
+      "correctColors": [
+        { "area1": "0xc9091c" },
+        { "area2": "0xf6be2f" },
+        { "area3": "0x000000" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0x00ff00", "0xffffff"]
+    },
+    {
+      "id" : "1",
+      "country": "Thailand",
+      "correctColors": [
+        { "area1": "0x982432" },
+        { "area2": "0xffffff" },
+        { "area3": "0x292547" },
+        { "area4": "0xffffff" },
+        { "area5": "0x982432" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xffff00", "0x000000", "0x35b235"]
+    },
+    {
+      "id" : "1",
+      "country": "Tanzania",
+      "correctColors": [
+        { "area1": "0x54b44a" },
+        { "area2": "0x48a1d9" },
+        { "area3": "0xf5d34a" },
+        { "area4": "0x000000" }
+      ],
+      "excludedAreas" : ["area3"],
+      "wrongColors" : ["0xff00b9", "0xffffff", "0xff0000" ]
+    },
+    {
+      "id" : "1",
+      "country": "Tajikistan",
+      "correctColors": [
+        { "area1": "0xca0814" },
+        { "area2": "0xffffff" },
+        { "area3": "0x0a650c" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xffff00", "0x0000ff", "0xff00ff"]
+    },
+    {
+      "id" : "1",
+      "country": "Syria",
+      "correctColors": [
+        { "area1": "0xcb162c" },
+        { "area2": "0xffffff" },
+        { "area3": "0x000000" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xffff00", "0x0000ff", "0xff00ff"]
+    },
+    {
+      "id" : "1",
+      "country": "Switzerland",
+      "correctColors": [
+        { "area1": "0xea3323" },
+        { "area2": "0xffffff" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0x3a9f1a", "0x000000", "0xaaffff"]
+    },
+    {
+      "id" : "1",
       "country": "Sweden",
-      "area1": "0x2d68a4",
-      "area2": "0x2d68a4",
-      "area3": "0x2d68a4",
-      "area4": "0x2d68a4",
-      "area5": "0xf7cf46",
+      "correctColors": [
+        { "area1": "0x2d68a4" },
+        { "area2": "0x2d68a4" },
+        { "area3": "0x2d68a4" },
+        { "area4": "0x2d68a4" },
+        { "area5": "0xf7cf46" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : ["0x000000", "0x3a9f1a", "0xffff00", "0x0000ff"]
+      "wrongColors" : ["0x000000", "0x3a9f1a", "0xff0000", "0xffffff"]
     },
     {
-      "country": "Sudan",
-      "area1": "0xD21034",
-      "area2": "0xffffff",
-      "area3": "0x000000",
-      "area4": "0x007229",
-      "excludedAreas" : [],
       "id" : "1",
-      "wrongColors" : ["0x0000ff", "0xffff00"]
-    },
-    {
       "country": "Suriname",
-      "area1": "0x3a7d42",
-      "area2": "0xffffff",
-      "area3": "0x3a7d42",
-      "area4": "0xb21031",
+      "correctColors": [
+        { "area1": "0x3a7d42" },
+        { "area2": "0xffffff" },
+        { "area3": "0x3a7d42" },
+        { "area4": "0xb21031" }
+      ],
       "excludedAreas" : ["area2"],
-      "id" : "1",
       "wrongColors" : ["0x0000ff", "0x000000", "0xffff00", "0xc2199d"]
     },
     {
-      "country": "StVincent and Grenadines",
-      "area1": "0x0c5ba8",
-      "area2": "0xf3ef34",
-      "area3": "0x239918",
-      "excludedAreas" : [],
       "id" : "1",
+      "country": "Sudan",
+      "correctColors": [
+        { "area1": "0xD21034" },
+        { "area2": "0xffffff" },
+        { "area3": "0x000000" },
+        { "area4": "0x007229" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0xffff00"]
+    },
+    {
+      "id" : "1",
+      "country": "StVincent and Grenadines",
+      "correctColors": [
+        { "area1": "0x0c5ba8" },
+        { "area2": "0xf3ef34" },
+        { "area3": "0x239918" }
+      ],
+      "excludedAreas" : [],
       "wrongColors" : ["0xff0000", "0x000000", "0xff00ff"]
     },
     {
+      "id" : "1",
       "country": "Sri Lanka",
-      "area1": "0xfdb62b",
-      "area2": "0x085642",
-      "area3": "0xfc5c1f",
-      "area4": "0x8c222c",
+      "correctColors": [
+        { "area1": "0xfdb62b" },
+        { "area2": "0x085642" },
+        { "area3": "0xfc5c1f" },
+        { "area4": "0x8c222c" }
+      ],
       "excludedAreas" : ["area1"],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xff00ff", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Spain",
-      "area1": "0xa81821",
-      "area2": "0xf0be2c",
-      "area3": "0xa81821",
+      "correctColors": [
+        { "area1": "0xa81821" },
+        { "area2": "0xf0be2c" },
+        { "area3": "0xa81821" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x12af12", "0x000000", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "South Sudan",
-      "area1": "0x000000",
-      "area2": "0xffffff",
-      "area3": "0x168835",
-      "area4": "0xd81824",
-      "area5": "0x154bac",
+      "correctColors": [
+        { "area1": "0x000000" },
+        { "area2": "0xffffff" },
+        { "area3": "0x168835" },
+        { "area4": "0xd81824" },
+        { "area5": "0x154bac" }
+      ],
       "excludedAreas" : ["area2"],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xffff00", "0x00ffff"]
     },
     {
+      "id" : "1",
       "country": "South Korea",
-      "area1": "0xffffff",
-      "area2": "0xcb313e",
-      "area3": "0x08499d",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xcb313e" },
+        { "area3": "0x08499d" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xffff00", "0x00ffff", "0x00ff00"]
     },
     {
+      "id" : "1",
       "country": "South Africa",
-      "area1": "0xd04635",
-      "area2": "0x000485",
-      "area3": "0xffffff",
-      "area4": "0x337749",
-      "area5": "0xf4bd43",
-      "area6": "0x000000",
-      "excludedAreas" : [],
-      "id" : "1",
-     "wrongColors" : []
+      "correctColors": [
+        { "area1": "0xd04635" },
+        { "area2": "0x000485" },
+        { "area3": "0xffffff" },
+        { "area4": "0x337749" },
+        { "area5": "0xf4bd43" },
+        { "area6": "0x000000" }
+      ],
+      "excludedAreas" : ["area3", "area5"],
+      "wrongColors" : ["0xffff00", "0xc50999"]
     },
-    {
+    { "id" : "1",
       "country": "Somalia",
-      "area1": "0x5388d7",
-      "area2": "0xffffff",
+      "correctColors": [
+        { "area1": "0x5388d7" },
+        { "area2": "0xffffff" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xff0000", "0x14c014", "0x0000ff", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Solomon Islands",
-      "area1": "0x071cd2",
-      "area2": "0x095f0b",
-      "area3": "0xfdca2e",
-      "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "correctColors": [
+        { "area1": "0x071cd2" },
+        { "area2": "0x095f0b" },
+        { "area3": "0xfdca2e" }
+      ],
+      "excludedAreas" : ["area3"],
+      "wrongColors" : ["0xcf1638", "0xff00ff", "0x000000", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Slovenia",
-      "area1": "0xffffff",
-      "area2": "0x0618bc",
-      "area3": "0xd30814",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0x0618bc" },
+        { "area3": "0xd30814" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x228822", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Slovakia",
-      "area1": "0xffffff",
-      "area2": "0x1351a0",
-      "area3": "0xeb212e",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0x1351a0" },
+        { "area3": "0xeb212e" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x00ff00", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Singapore",
-      "area1": "0xdd0a16",
-      "area2": "0xffffff",
+      "correctColors": [
+        { "area1": "0xdd0a16" },
+        { "area2": "0xffffff" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x0fb90f", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Sierra Leone",
-      "area1": "0x54b44a",
-      "area2": "0xffffff",
-      "area3": "0x3171c1",
+      "correctColors": [
+        { "area1": "0x54b44a" },
+        { "area2": "0xffffff" },
+        { "area3": "0x3171c1" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xff0000", "0xffff00", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Seychelles",
-      "area1": "0x153984",
-      "area2": "0xf7dc6c",
-      "area3": "0xc8342b",
-      "area4": "0xffffff",
-      "area5": "0x35793e",
+      "correctColors": [
+        { "area1": "0x153984" },
+        { "area2": "0xf7dc6c" },
+        { "area3": "0xc8342b" },
+        { "area4": "0xffffff" },
+        { "area5": "0x35793e" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x000000"]
     },
     {
+      "id" : "1",
       "country": "Serbia",
-      "area1": "0xc43840",
-      "area2": "0x114275",
-      "area3": "0xffffff",
+      "correctColors": [
+        { "area1": "0xc43840" },
+        { "area2": "0x114275" },
+        { "area3": "0xffffff" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x459516", "0xffff00", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Senegal",
-      "area1": "0x14712a",
-      "area2": "0xfffd38",
-      "area3": "0xba0712",
+      "correctColors": [
+        { "area1": "0x14712a" },
+        { "area2": "0xfffd38" },
+        { "area3": "0xba0712" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xff00e4", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Sao Tome and Principe",
-      "area1": "0x21ac35",
-      "area2": "0xfdcc2f",
-      "area3": "0x21ab34",
-      "area4": "0xcf1638",
+      "correctColors": [
+        { "area1": "0x21ac35" },
+        { "area2": "0xfdcc2f" },
+        { "area3": "0x21ab34" },
+        { "area4": "0xcf1638" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "San Marino",
-      "area1": "0xffffff",
-      "area2": "0x2ab7ed",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0x2ab7ed" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x3fd03f", "0xff0000", "0xe38803"]
     },
     {
+      "id" : "1",
       "country": "Samoa",
-      "area1": "0xcb162c",
-      "area2": "0x042e7c",
+      "correctColors": [
+        { "area1": "0xcb162c" },
+        { "area2": "0x042e7c" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xe38803", "0xffff00", "0xff00ff", "0x00ff00"]
     },
     {
+      "id" : "1",
       "country": "Saint Lucia",
-      "area1": "0x6acffc",
-      "area2": "0xffffff",
-      "area3": "0x000000",
-      "area4": "0xfdcc2f",
-      "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "correctColors": [
+        { "area1": "0x6acffc" },
+        { "area2": "0xffffff" },
+        { "area3": "0x000000" },
+        { "area4": "0xfdcc2f" }
+      ],
+      "excludedAreas" : ["area2"],
+      "wrongColors" : ["0xff0000", "0xff00ff", "0x19b219"]
     },
     {
+      "id" : "1",
       "country": "Saint Kitt And Nevis",
-      "area1": "0x6ad0fd",
-      "area2": "0xffffff",
-      "area3": "0x000000",
-      "area4": "0xfecd2f",
-      "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "correctColors": [
+        { "area1": "0x3a9f1a" },
+        { "area2": "0xc50813" },
+        { "area3": "0xfee734" },
+        { "area4": "0x000000" }
+      ],
+      "excludedAreas" : ["area3"],
+      "wrongColors" : ["0x0000ff", "0xffffff", "0xff00ff"]
     },
     {
+      "id" : "1",
       "country": "Rwanda",
-      "area1": "0x1ba2dc",
-      "area2": "0xf9d02f",
-      "area3": "0x235f3e",
+      "correctColors": [
+        { "area1": "0x1ba2dc" },
+        { "area2": "0xf9d02f" },
+        { "area3": "0x235f3e" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xff00ff", "0xff0000", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Russia",
-      "area1": "0xFFFFFF",
-      "area2": "0x0032A0",
-      "area3": "0xDA291C",
+      "correctColors": [
+        { "area1": "0xFFFFFF" },
+        { "area2": "0x0032A0" },
+        { "area3": "0xDA291C" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x16b916", "0xffff00", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Romania",
-      "area1": "0x002B7F",
-      "area2": "0xFCD116",
-      "area3": "0xCE1126",
+      "correctColors": [
+        { "area1": "0x002B7F" },
+        { "area2": "0xFCD116" },
+        { "area3": "0xCE1126" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x1d921d", "0xffffff", "0x972797"]
     },
     {
+      "id" : "1",
       "country": "Qatar",
-      "area1": "0xffffff",
-      "area2": "0x8A1538",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0x8A1538" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0001ff", "0x000000", "0xffec00", "0x009600"]
     },
     {
+      "id" : "1",
       "country": "Portugal",
-      "area1": "0x0a650c",
-      "area2": "0xfc0d1b",
+      "correctColors": [
+        { "area1": "0x0a650c" },
+        { "area2": "0xfc0d1b" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00", "0x000000", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Poland",
-      "area1": "0xffffff",
-      "area2": "0xca2e3f",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xca2e3f" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xffff00", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Philippines",
-      "area1": "0x073ca5",
-      "area2": "0xcb162c",
-      "area3": "0xffffff",
+      "correctColors": [
+        { "area1": "0x073ca5" },
+        { "area2": "0xcb162c" },
+        { "area3": "0xffffff" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x0e810e", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Peru",
-      "area1": "0xd7172b",
-      "area2": "0xffffff",
-      "area3": "0xd7172b",
+      "correctColors": [
+        { "area1": "0xd7172b" },
+        { "area2": "0xffffff" },
+        { "area3": "0xd7172b" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x1f941f", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Paraguay",
-      "area1": "0xd22d27",
-      "area2": "0xffffff",
-      "area3": "0x073ca5",
+      "correctColors": [
+        { "area1": "0xd22d27" },
+        { "area2": "0xffffff" },
+        { "area3": "0x073ca5" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x00ff00", "0xffff00", "0x000000"]
     },
     {
-      "country": "Panama",
-      "area1": "0xffffff",
-      "area2": "0xd80916",
-      "area3": "0x0515a8",
-      "area4": "0xffffff",
-      "excludedAreas" : [],
       "id" : "1",
-      "wrongColors" : []
-    },
-    {
       "country": "Papua New Guinea",
-      "area1": "0xfd0d1c",
-      "area2": "0x000000",
+      "correctColors": [
+        { "area1": "0xfd0d1c" },
+        { "area2": "0x000000" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00", "0xff00ff", "0xffffff"]
     },
     {
-      "country": "Pakistan",
-      "area1": "0xffffff",
-      "area2": "0x125812",
-      "excludedAreas" : [],
       "id" : "1",
-      "wrongColors" : []
+      "country": "Panama",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xd80916" },
+        { "area3": "0x0515a8" },
+        { "area4": "0xffffff" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xffff00", "0x16a316", "0x000000"]
     },
     {
+      "id" : "1",
+      "country": "Palestine",
+      "correctColors": [
+        { "area1": "0x000000" },
+        { "area2": "0xffffff" },
+        { "area3": "0x009736" },
+        { "area4": "0xEE2A35" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0xffff00"]
+    },
+    {
+      "id" : "1",
       "country": "Palau",
-      "area1": "0x4498f8",
-      "area2": "0xfffe55",
+      "correctColors": [
+        { "area1": "0x4498f8" },
+        { "area2": "0xfffe55" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xf22834", "0xaa00ff", "0xffffff", "0x000000"]
     },
     {
+      "id" : "1",
+      "country": "Pakistan",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0x125812" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xf22834", "0xffff00", "0x0000ff", "0x000000"]
+    },
+    {
+      "id" : "1",
       "country": "Oman",
-      "area1": "0xffffff",
-      "area2": "0xed3032",
-      "area3": "0x128e2c",
-      "area4": "0xec3031",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xed3032" },
+        { "area3": "0x128e2c" },
+        { "area4": "0xec3031" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00", "0x000000"]
     },
     {
-      "country": "Norway",
-      "area1": "0xab2431",
-      "area2": "0xab2431",
-      "area3": "0xab2431",
-      "area4": "0xab2431",
-      "area5": "0xffffff",
-      "area6": "0x061958",
-      "excludedAreas" : [],
       "id" : "1",
-      "wrongColors" : []
+      "country": "Norway",
+      "correctColors": [
+        { "area1": "0xBA0C2F" },
+        { "area2": "0xBA0C2F" },
+        { "area3": "0xBA0C2F" },
+        { "area4": "0xBA0C2F" },
+        { "area5": "0xFFFFFF" },
+        { "area6": "0x00205B" }
+      ],
+      "excludedAreas" : ["area5"],
+      "wrongColors" : ["0x00ff00", "0xffff00", "0x000000", "0xae13ae"]
     },
     {
       "id" : "1",
       "country": "North Korea",
-      "area1": "0x3f5896",
-      "area2": "0xffffff",
-      "area3": "0x3f5896",
-      "area4": "0xc40813",
-      "excludedAreas" : [],
-      "wrongColors" : []
+      "correctColors": [
+        { "area1": "0x3f5896" },
+        { "area2": "0xffffff" },
+        { "area3": "0x3f5896" },
+        { "area4": "0xc40813" }
+      ],
+      "excludedAreas" : ["area2"],
+      "wrongColors" : ["0x000000", "0x245f0f", "0xfff500", "0xff00ff"]
     },
     {
+      "id" : "1",
       "country": "Nigeria",
-      "area1": "0x008753",
-      "area2": "0xFFFFFF",
-      "area3": "0x008753",
+      "correctColors": [
+        { "area1": "0x008753" },
+        { "area2": "0xFFFFFF" },
+        { "area3": "0x008753" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x00ffff", "0x000000", "0xff0000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Niger",
-      "area1": "0xd05c27",
-      "area2": "0xFFFFFF",
-      "area3": "0x4fae42",
-      "area4": "0xd05c27",
+      "correctColors": [
+        { "area1": "0xd05c27" },
+        { "area2": "0xFFFFFF" },
+        { "area3": "0x4fae42" },
+        { "area4": "0xd05c27" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00", "0x000000"]
     },
     {
+      "id": "1",
       "country": "Netherlands",
-      "area1": "0xA91F32",
-      "area2": "0xFFFFFF",
-      "area3": "0x1E4785",
+      "correctColors": [
+        { "area1": "0xA91F32" },
+        { "area2": "0xFFFFFF" },
+        { "area3": "0x1E4785" }
+      ],
       "excludedAreas": [],
-      "id": "1"
+      "wrongColors" : ["0xfeb12e", "0x000000", "0x0f8f0f"]
     },
     {
+      "id": "1",
       "country": "Nauru",
-      "area1": "0x03246e",
-      "area2": "0xfeb12e",
-      "area3": "0x03246e",
+      "correctColors": [
+        { "area1": "0x03246e" },
+        { "area2": "0xfeb12e" },
+        { "area3": "0x03246e" }
+      ],
       "excludedAreas": [],
-      "id": "1"
+      "wrongColors" : ["0xf6224e", "0x72f622", "0x000000",  "0xffffff" ]
     },
     {
-      "country": "Myanmar",
-      "area1": "0xfdca2f",
-      "area2": "0x3bb03c",
-      "area3": "0xe72b3e",
-      "excludedAreas" : [],
-      "id" : "1"
-},
-    {
+      "id" : "1",
       "country": "Namimbia",
-      "area1": "0x3863a0",
-      "area2": "0x3da01b",
-      "area3": "0xffffff",
-      "area4": "0xc50813",
-      "excludedAreas" : [],
-      "id" : "1"
-},
+      "correctColors": [
+        { "area1": "0x3863a0" },
+        { "area2": "0x3da01b" },
+        { "area3": "0xffffff" },
+        { "area4": "0xc50813" }
+      ],
+      "excludedAreas" : ["area3"],
+      "wrongColors" : ["0xff9100", "0xffffff", "0x000000" ]
+    },
     {
-      "country": "Mozambique",
-      "area1": "0x159918",
-      "area2": "0xffffff",
-      "area3": "0xfec92e",
-      "area4": "0x000000",
-      "area5": "0xfc0d1b",
+      "id" : "1",
+      "country": "Myanmar",
+      "correctColors": [
+        { "area1": "0xfdca2f" },
+        { "area2": "0x3bb03c" },
+        { "area3": "0xe72b3e" }
+      ],
       "excludedAreas" : [],
-      "id" : "1"
+      "wrongColors" : ["0x0000ff", "0xff9300", "0xff9300" ]
+    },
+    {
+      "id" : "1",
+      "country": "Mozambique",
+      "correctColors": [
+        { "area1": "0x159918" },
+        { "area2": "0xffffff" },
+        { "area3": "0xfec92e" },
+        { "area4": "0x000000" },
+        { "area5": "0xfc0d1b" }
+      ],
+      "excludedAreas" : ["area2"],
+      "wrongColors" : ["0x0000ff", "0x5c065c"]
    },
     {
+      "id" : "1",
       "country": "Mongolia",
-      "area1": "0xd82438",
-      "area2": "0x0e68b1",
-      "area3": "0xd82438",
+      "correctColors": [
+        { "area1": "0xd82438" },
+        { "area2": "0x0e68b1" },
+        { "area3": "0xd82438" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x00ff00", "0x000000", "0xffffff", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Monaco",
-      "area1": "0xff0000",
-      "area2": "0xffffff",
+      "correctColors": [
+        { "area1": "0xff0000" },
+        { "area2": "0xffffff" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x118111", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Moldova",
-      "area1": "0x063599",
-      "area2": "0xfedd32",
-      "area3": "0xdb241f",
+      "correctColors": [
+        { "area1": "0x063599" },
+        { "area2": "0xfedd32" },
+        { "area3": "0xdb241f" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xffffff", "0x00ff00", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Mexico",
-      "area1": "0x0b6848",
-      "area2": "0xffffff",
-      "area3": "0xcc172d",
+      "correctColors": [
+        { "area1": "0x0b6848" },
+        { "area2": "0xffffff" },
+        { "area3": "0xcc172d" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xffff00", "0x000000", "0x0000ff"]
     },
     {
+      "id" : "1",
       "country": "Mauritius",
-      "area1": "0xEB2436",
-      "area2": "0x131A6D",
-      "area3": "0xFFD600",
-      "area4": "0x00A650",
+      "correctColors": [
+        { "area1": "0xEB2436" },
+        { "area2": "0x131A6D" },
+        { "area3": "0xFFD600" },
+        { "area4": "0x00A650" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xffffff", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Mauritania",
-      "area1": "0xcb2d41",
-      "area2": "0x096134",
-      "area3": "0xcb2d41",
+      "correctColors": [
+        { "area1": "0xcb2d41" },
+        { "area2": "0x096134" },
+        { "area3": "0xcb2d41" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xffff00", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Malta",
-      "area1": "0xffffff",
-      "area2": "0xf22834",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xf22834" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x12843e", "0x000000", "0x00ffff", "0x8f1e97"]
     },
     {
+      "id" : "1",
       "country": "Mali",
-      "area1": "0x14B53A",
-      "area2": "0xFCD116",
-      "area3": "0xCE1126",
+      "correctColors": [
+        { "area1": "0x14B53A" },
+        { "area2": "0xFCD116" },
+        { "area3": "0xCE1126" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffffff", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Maldives",
-      "area1": "0xf22834",
-      "area2": "0x0f7d3d",
+      "correctColors": [
+        { "area1": "0xf22834" },
+        { "area2": "0x0f7d3d" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x000000", "0x0000ff", "0xffff00", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Malawi",
-      "area1": "0x000000",
-      "area2": "0xf11a1d",
-      "area3": "0x27863f",
+      "correctColors": [
+        { "area1": "0x000000" },
+        { "area2": "0xf11a1d" },
+        { "area3": "0x27863f" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xffff00", "0xae0cd4", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Madagascar",
-      "area1": "0xffffff",
-      "area2": "0xe74d3c",
-      "area3": "0x377e3f",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xe74d3c" },
+        { "area3": "0x377e3f" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Luxembourg",
-      "area1": "0xEF3340",
-      "area2": "0xFFFFFF",
-      "area3": "0x00A3E0",
+      "correctColors": [
+        { "area1": "0xEF3340" },
+        { "area2": "0xFFFFFF" },
+        { "area3": "0x00A3E0" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x11af11", "0xFFCE00", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Lithuania",
-      "area1": "0xf3be42",
-      "area2": "0x2d6946",
-      "area3": "0xb13331",
+      "correctColors": [
+        { "area1": "0xf3be42" },
+        { "area2": "0x2d6946" },
+        { "area3": "0xb13331" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Liechtenstein",
-      "area1": "0x042e7d",
-      "area2": "0xcb162c",
+      "correctColors": [
+        { "area1": "0x042e7d" },
+        { "area2": "0xcb162c" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xffffff", "0x118111", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Libya",
-      "area1": "0xe40b21",
-      "area2": "0x000000",
-      "area3": "0x2b9d4a",
+      "correctColors": [
+        { "area1": "0xe40b21" },
+        { "area2": "0x000000" },
+        { "area3": "0x2b9d4a" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00", "0xffffff"]
     },
     {
+      "id" : "1",
+      "country": "Lesotho",
+      "correctColors": [
+        { "area1": "0x05279c" },
+        { "area2": "0xffffff" },
+        { "area3": "0x149447" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xff0000", "0xffff00", "0xff00ff"]
+    },
+    {
+      "id" : "1",
       "country": "Lebanon",
-      "area1": "0xeb1c2a",
-      "area2": "0xffffff",
-      "area3": "0xeb1c2a",
+      "correctColors": [
+        { "area1": "0xeb1c2a" },
+        { "area2": "0xffffff" },
+        { "area3": "0xeb1c2a" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xff00ff", "0x00ff00"]
     },
     {
+      "id" : "1",
       "country": "Latvia",
-      "area1": "0x94363a",
-      "area2": "0xffffff",
-      "area3": "0x94363a",
+      "correctColors": [
+        { "area1": "0x94363a" },
+        { "area2": "0xffffff" },
+        { "area3": "0x94363a" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00", "0xffff00", "0x00ffff"]
     },
     {
+      "id" : "1",
       "country": "Laos",
-      "area1": "0xbe2a2c",
-      "area2": "0x0a2364",
-      "area3": "0xbe2a2c",
-      "area4": "0xffffff",
+      "correctColors": [
+        { "area1": "0xbe2a2c" },
+        { "area2": "0x0a2364" },
+        { "area3": "0xbe2a2c" },
+        { "area4": "0xffffff" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x28780a", "0xffff00", "0x000000"]
     },
     {
+      "id" : "1",
       "country": "Kuwait",
-      "area1": "0x347843",
-      "area2": "0xffffff",
-      "area3": "0xbd2d2f",
-      "area4": "0x010000",
+      "correctColors": [
+        { "area1": "0x347843" },
+        { "area2": "0xffffff" },
+        { "area3": "0xbd2d2f" },
+        { "area4": "0x010000" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Kenya",
-      "area1": "0x000000",
-      "area2": "0xffffff",
-      "area3": "0x0a650c",
-      "area4": "0xb90711",
-      "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "correctColors": [
+        { "area1": "0x000000" },
+        { "area2": "0xffffff" },
+        { "area3": "0x0a650c" },
+        { "area4": "0xb90711" }
+      ],
+      "excludedAreas" : ["area2"],
+      "wrongColors" : ["0x0000ff", "0xffff00", "0xff00b5"]
     },
     {
+      "id" : "1",
       "country": "Jordan",
-      "area1": "0x000000",
-      "area2": "0xffffff",
-      "area3": "0x149717",
+      "correctColors": [
+        { "area1": "0x000000" },
+        { "area2": "0xffffff" },
+        { "area3": "0x149717" },
+        { "area4": "0xfd0e1c" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Japan",
-      "area1": "0xffffff",
-      "area2": "0xad2330",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xad2330" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x000000", "0x0000ff", "0x20aa20", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Jamaica",
-      "area1": "0xf4bc44",
-      "area2": "0x33764b",
-      "area3": "0x000000",
-      "area4": "0x33764b",
-      "area5": "0x000000",
+      "correctColors": [
+        { "area1": "0xf4bc44" },
+        { "area2": "0x33764b" },
+        { "area3": "0x000000" },
+        { "area4": "0x33764b" },
+        { "area5": "0x000000" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xff0000", "0x0000ff", "0xffffff"]
     },
     {
+      "id" : "1",
       "country": "Ivory Coast",
-      "area1": "0xe78632",
-      "area2": "0xffffff",
-      "area3": "0x469d65",
+      "correctColors": [
+        { "area1": "0xe78632" },
+        { "area2": "0xffffff" },
+        { "area3": "0x469d65" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0xff0000", "0x000000", "0x0000ff"]
     },
     {
+      "id" : "1",
       "country": "Italy",
-      "area1": "0x008C45",
-      "area2": "0xF4F5F0",
-      "area3": "0xCD212A",
+      "correctColors": [
+        { "area1": "0x008C45" },
+        { "area2": "0xF4F5F0" },
+        { "area3": "0xCD212A" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xffff00"]
     },
     {
+      "id" : "1",
       "country": "Ireland",
-      "area1": "0x169B62",
-      "area2": "0xffffff",
-      "area3": "0xFF883E",
+      "correctColors": [
+        { "area1": "0x169B62" },
+        { "area2": "0xffffff" },
+        { "area3": "0xFF883E" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x00ffff", "0xff0000", "0x000000"]
     },
     {
-      "country": "Iran",
-      "area1": "0x2b9d44",
-      "area2": "0xffffff",
-      "area3": "0xf22834",
-      "excludedAreas" : [],
       "id" : "1",
-      "wrongColors" : []
-    },
-    {
       "country": "Iraq",
-      "area1": "0xcb162c",
-      "area2": "0xffffff",
-      "area3": "0x000000",
+      "correctColors": [
+        { "area1": "0xcb162c" },
+        { "area2": "0xffffff" },
+        { "area3": "0x000000" }
+      ],
       "excludedAreas" : [],
-      "id" : "1",
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x0e810e", "0xffff00"]
     },
     {
-      "country": "Indonesia",
-      "area1": "0xFF0000",
-      "area2": "0xffffff",
-      "excludedAreas" : [],
       "id" : "1",
-      "wrongColors" : []
+      "country": "Iran",
+      "correctColors": [
+        { "area1": "0x2b9d44" },
+        { "area2": "0xffffff" },
+        { "area3": "0xf22834" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0xffff00", "0x000000"]
+    },
+    {
+      "id" : "1",
+      "country": "Indonesia",
+      "correctColors": [
+        { "area1": "0xFF0000" },
+        { "area2": "0xffffff" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0x118111", "0x000000", "0xffff00"]
     },
     {
       "id" : "1",
       "country": "India",
-      "area1": "0xfd9941",
-      "area2": "0xffffff",
-      "area3": "0x1c8718",
+      "correctColors": [
+        { "area1": "0xfd9941" },
+        { "area2": "0xffffff" },
+        { "area3": "0x1c8718" }
+      ],
       "excludedAreas" : [],
-      "wrongColors" : []
+      "wrongColors" : ["0x0000ff", "0x000000", "0xbf1899"]
     },
     {
       "id" : "1",

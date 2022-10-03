@@ -10,17 +10,13 @@ export class Laos extends PIXI.Container {
         this._solved = data.solved;
         this._lineWidth = data.lineWidth;
         this._flagData = data.flagData;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); //red
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["area3"]); //red
-        this.area4Color = parseInt(this._flagData["area4"]); //white
-
-        //wrong colors
-        this.wrongColor1 = 0x28780a;
-        this.wrongColor2 = 0xffff00;
-        this.wrongColor3 = 0x000000;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
 
         this.area1Height = 0.245 * this._flagHeight;
         this.area2Height = 0.51 * this._flagHeight;
@@ -63,17 +59,12 @@ export class Laos extends PIXI.Container {
         });
     }
 
-
-
     getColorsForPickers(){
         return [
             this.area1Color,
             this.area2Color,
-            this.area4Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area4Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

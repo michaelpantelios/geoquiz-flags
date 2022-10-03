@@ -10,6 +10,7 @@ export class Somalia extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.star1 = new PIXI.Point(0.5 * this._flagWidth, 0.258 * this._flagHeight);
         this.star2 = new PIXI.Point(0.539 * this._flagWidth, 0.425 * this._flagHeight);
@@ -23,14 +24,8 @@ export class Somalia extends PIXI.Container {
         this.star10 = new PIXI.Point(0.46 * this._flagWidth, 0.425 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // green
-        this.area2Color = parseInt(this._flagData["area2"]); //white
-
-        //wrong colors
-        this.wrongColor1 = 0xff0000;
-        this.wrongColor2 = 0x14c014;
-        this.wrongColor3 = 0x0000ff;
-        this.wrongColor4 = 0x000000;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -55,12 +50,8 @@ export class Somalia extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

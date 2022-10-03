@@ -10,6 +10,7 @@ export class SouthAfrica extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.area1_1 = new PIXI.Point(0.19 * this._flagWidth, 0);
         this.area1_2 = new PIXI.Point(this._flagWidth, 0);
@@ -48,16 +49,12 @@ export class SouthAfrica extends PIXI.Container {
         this.area6_3 = new PIXI.Point(0, 0.773 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["area4"]); // cyan
-        this.area5Color = parseInt(this._flagData["area5"]); // cyan
-        this.area6Color = parseInt(this._flagData["area6"]); // cyan
-
-        //wrong colors
-        this.wrongColor1 = 0xf15c11;
-        this.wrongColor2 = 0xc50999;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]);
+        this.area6Color = parseInt(this._flagData["correctColors"][5]["area6"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -111,10 +108,8 @@ export class SouthAfrica extends PIXI.Container {
             this.area1Color,
             this.area2Color,
             this.area4Color,
-            this.area6Color,
-            this.wrongColor1,
-            this.wrongColor2
-        ];
+            this.area6Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color) {

@@ -9,17 +9,17 @@ export class Portugal extends PIXI.Container {
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
         this._scale = parseFloat(data.scale.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.area1Width = 0.4 * this._flagWidth;
         this.emblemX = 0.237 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // green
-        this.area2Color = parseInt(this._flagData["area2"]); //white
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
 
         //wrong colors
         this.wrongColor1 = 0x0000ff;
@@ -78,12 +78,8 @@ export class Portugal extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
+            this.area2Color
+        ].concat(this.wrongColors);
     }
 
     getFlagCountryName(){

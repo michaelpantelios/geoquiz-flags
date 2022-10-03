@@ -10,6 +10,7 @@ export class Seychelles extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.area1Width = 0.47 * this._flagWidth;
         this.area2X2 = 0.94 * this._flagWidth;
@@ -17,11 +18,11 @@ export class Seychelles extends PIXI.Container {
         this.area4Y1 = 0.77 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // red
-        this.area2Color = parseInt(this._flagData["area2"]); //green
-        this.area3Color = parseInt(this._flagData["area3"]); //red
-        this.area4Color = parseInt(this._flagData["area4"]); //green
-        this.area5Color = parseInt(this._flagData["area5"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //green
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //green
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //red
 
         //wrong colors
         this.wrongColor1 = 0x000000;
@@ -78,9 +79,8 @@ export class Seychelles extends PIXI.Container {
             this.area2Color,
             this.area3Color,
             this.area4Color,
-            this.area5Color,
-            this.wrongColor1
-        ];
+            this.area5Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

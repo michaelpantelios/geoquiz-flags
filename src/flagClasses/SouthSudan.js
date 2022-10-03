@@ -8,11 +8,11 @@ export class SouthSudan extends PIXI.Container {
 
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._scale = parseFloat(data.scale.toString());
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this._area1Height = 0.3 * this._flagHeight; // height of cyan areas
         this._area2Height = 0.4 * this._flagHeight; // white, non interactive
@@ -22,15 +22,11 @@ export class SouthSudan extends PIXI.Container {
         this._emblemX = 0.079 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["area4"]); // cyan
-        this.area5Color = parseInt(this._flagData["area5"]); // cyan
-
-        //wrong colors
-        this.wrongColor1 = 0xffff00;
-        this.wrongColor2 = 0x00ffff;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // cyan
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // cyan
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); // cyan
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -89,10 +85,8 @@ export class SouthSudan extends PIXI.Container {
             this.area1Color,
             this.area3Color,
             this.area4Color,
-            this.area5Color,
-            this.wrongColor1,
-            this.wrongColor2
-        ];
+            this.area5Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color) {

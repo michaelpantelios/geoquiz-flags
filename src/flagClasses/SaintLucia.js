@@ -10,6 +10,7 @@ export class SaintLucia extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.area2BaseX = 0.24 * this._flagWidth;
         this.area3BaseX = 0.28 * this._flagWidth;
@@ -21,10 +22,10 @@ export class SaintLucia extends PIXI.Container {
         this.area4Height = 0.41 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["area4"]); // cyan
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // cyan
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // cyan
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
 
         //wrong colors
         this.wrongColor1 = 0x0000ff;
@@ -112,11 +113,8 @@ export class SaintLucia extends PIXI.Container {
         return [
             this.area1Color,
             this.area3Color,
-            this.area4Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-        ];
+            this.area4Color
+        ].concat(this.wrongColors);
     }
 
     getFlagCountryName(){

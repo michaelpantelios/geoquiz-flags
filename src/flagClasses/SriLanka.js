@@ -9,10 +9,10 @@ export class SriLanka extends PIXI.Container {
         this._flagWidth = parseInt(data.width.toString());
         this._flagHeight = parseInt(data.height.toString());
         this._scale = parseFloat(data.scale.toString());
-
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.emblemX = 0.405 * this._flagWidth;
         this.emblemY = 0.098 * this._flagHeight;
@@ -25,15 +25,10 @@ export class SriLanka extends PIXI.Container {
         this.area4LeftTop = new PIXI.Point(0.3584 * this._flagWidth, 0.0557 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // green
-        this.area2Color = parseInt(this._flagData["area2"]); //white
-        this.area3Color = parseInt(this._flagData["area3"]); //red
-        this.area4Color = parseInt(this._flagData["area4"]); //red
-
-        //wrong colors
-        this.wrongColor1 = 0x0000ff;
-        this.wrongColor2 = 0xff00ff;
-        this.wrongColor3 = 0x000000;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //red
 
         this.area1 = new PIXI.Graphics();
         this.area1.name = "area1";
@@ -83,11 +78,8 @@ export class SriLanka extends PIXI.Container {
         return [
             this.area2Color,
             this.area3Color,
-            this.area4Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area4Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

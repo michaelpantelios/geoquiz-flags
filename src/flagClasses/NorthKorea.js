@@ -12,6 +12,7 @@ export class NorthKorea extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.area1Height = 0.18 * this._flagHeight;
         this.area2Height = 0.639 * this._flagHeight;
@@ -19,16 +20,10 @@ export class NorthKorea extends PIXI.Container {
         this.emblemX = 0.091 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // blue
-        this.area2Color = parseInt(this._flagData["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["area3"]); //blue
-        this.area4Color = parseInt(this._flagData["area4"]); //blue
-
-        //wrong colors
-        this.wrongColor1 = 0x000000;
-        this.wrongColor2 = 0x245f0f;
-        this.wrongColor3 = 0xfff500;
-        this.wrongColor4 = 0xff00ff;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -74,6 +69,13 @@ export class NorthKorea extends PIXI.Container {
 
     }
 
+    getColorsForPickers(){
+        return [
+            this.area1Color,
+            this.area4Color
+        ].concat(this.wrongColors);
+    }
+
     paintFlagArea(name, color){
         switch(name){
             case this.area1.name:
@@ -107,17 +109,6 @@ export class NorthKorea extends PIXI.Container {
                 break;
 
         }
-    }
-
-    getColorsForPickers(){
-        return [
-            this.area1Color,
-            this.area4Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3,
-            this.wrongColor4
-        ];
     }
 
     getFlagCountryName(){

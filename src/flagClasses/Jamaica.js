@@ -10,6 +10,7 @@ export class Jamaica extends PIXI.Container {
         this._solved = data.solved;
         this._flagData = data.flagData;
         this._lineWidth = data.lineWidth;
+        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.point0 = new PIXI.Point(0, 0);
         this.point1 = new PIXI.Point(0.09 * this._flagWidth, 0);
@@ -29,16 +30,11 @@ export class Jamaica extends PIXI.Container {
         this.point15 = new PIXI.Point(0, 0.09 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["area2"]); //white
-        this.area3Color = parseInt(this._flagData["area3"]); //cyan
-        this.area4Color = parseInt(this._flagData["area4"]); //white
-        this.area5Color = parseInt(this._flagData["area5"]); //cyan
-
-        //wrong colors
-        this.wrongColor1 = 0xff0000;
-        this.wrongColor2 = 0x0000ff;
-        this.wrongColor3 = 0xffffff;
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //cyan
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //white
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //cyan
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -91,11 +87,8 @@ export class Jamaica extends PIXI.Container {
         return [
             this.area1Color,
             this.area2Color,
-            this.area3Color,
-            this.wrongColor1,
-            this.wrongColor2,
-            this.wrongColor3
-        ];
+            this.area3Color
+        ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){

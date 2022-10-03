@@ -56,7 +56,6 @@ export class Andora extends PIXI.Container{
             this.area4.y = this._flagHeight / 2 - this.area4.height / 2 - 0.03 * this._flagHeight;
             this.area4.visible = true;
         }, 1000);
-
     }
 
     getColorsForPickers(){
