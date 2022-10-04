@@ -30,10 +30,10 @@ export class Tanzania extends PIXI.Container {
         this._emblemPos = new PIXI.Point(0.044 * this._flagWidth, 0.06 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); 
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); 
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); 
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); 
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -81,6 +81,7 @@ export class Tanzania extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.moveTo(0,0);
@@ -90,6 +91,7 @@ export class Tanzania extends PIXI.Container {
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.moveTo(this._area3_4.x, this._flagHeight);
@@ -99,6 +101,7 @@ export class Tanzania extends PIXI.Container {
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
                 this.area3.moveTo(this._area3_0.x, this._area3_0.y);
@@ -111,6 +114,7 @@ export class Tanzania extends PIXI.Container {
                 this.area3.endFill();
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area4.beginFill(color);
                 this.area4.moveTo(this._area4_0.x, this._area4_0.y);

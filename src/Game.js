@@ -154,6 +154,18 @@ import {Thailand} from "./flagClasses/Thailand";
 import {TimorLeste} from "./flagClasses/TimorLeste";
 import {Tongo} from "./flagClasses/Tongo";
 import {TrinidadTobago} from "./flagClasses/TrinidadTobago";
+import {UnitedArabEmirates} from "./flagClasses/UnitedArabEmirates";
+import {Uganda} from "./flagClasses/Uganda";
+import {Ukraine} from "./flagClasses/Ukraine";
+import {Uzbekistan} from "./flagClasses/Uzbekistan";
+import {Vanuatu} from "./flagClasses/Vanuatu";
+import {Venezuela} from "./flagClasses/Venezuela";
+import {Vietnam} from "./flagClasses/Vietnam";
+import {Yemen} from "./flagClasses/Yemen";
+import {Zimbabwe} from "./flagClasses/Zimbabwe";
+import {Scotland} from "./flagClasses/Scotland";
+import {Wales} from "./flagClasses/Wales";
+
 
 export class Game extends PIXI.Container {
     static get  FLAG_WIDTH() {  return 2388; }
@@ -175,8 +187,8 @@ export class Game extends PIXI.Container {
         this._flagScale = this._appWidth / Game.FLAG_WIDTH;
 
         this._allFlagsData = flagsData["flags"];
-        // console.log("flagData: ", this._allFlagsData);
-        // console.log(`We have ${ this._allFlagsData.length} flags`);
+        console.log("flagData: ", this._allFlagsData);
+        console.log(`We have ${ this._allFlagsData.length} flags`);
 
         this.colorPickers = new ColorPickersBar({"width" : this._appWidth, "height" : this._appWidth*0.1});
         this.colorPickers.x = document.documentElement.clientWidth / 2 - this.colorPickers.width  / 2;
@@ -646,6 +658,39 @@ export class Game extends PIXI.Container {
                     break;
                 case "Trinidad and Tobago":
                     flag = new TrinidadTobago(data);
+                    break;
+                case "United Arab Emirates":
+                    flag = new UnitedArabEmirates(data);
+                    break;
+                case "Uganda":
+                    flag = new Uganda(data);
+                    break;
+                case "Ukraine":
+                    flag = new Ukraine(data);
+                    break;
+                case "Uzbekistan":
+                    flag = new Uzbekistan(data);
+                    break;
+                case "Vanuatu":
+                    flag = new Vanuatu(data);
+                    break;
+                case "Venezuela":
+                    flag = new Venezuela(data);
+                    break;
+                case "Vietnam":
+                    flag = new Vietnam(data);
+                    break;
+                case "Yemen":
+                    flag = new Yemen(data);
+                    break;
+                case "Zimbabwe":
+                    flag = new Zimbabwe(data);
+                    break;
+                case "Scotland":
+                    flag = new Scotland(data);
+                    break;
+                case "Wales":
+                    flag = new Wales(data);
                     break;
             }
 

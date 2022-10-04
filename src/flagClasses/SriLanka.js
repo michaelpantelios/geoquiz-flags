@@ -25,10 +25,10 @@ export class SriLanka extends PIXI.Container {
         this.area4LeftTop = new PIXI.Point(0.3584 * this._flagWidth, 0.0557 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.name = "area1";

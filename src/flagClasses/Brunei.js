@@ -89,6 +89,7 @@ export class Brunei extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.moveTo(0, 0);
@@ -99,6 +100,7 @@ export class Brunei extends PIXI.Container {
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.moveTo(0, this._area2_3_y);
@@ -109,6 +111,7 @@ export class Brunei extends PIXI.Container {
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.moveTo(0, this._area1_0_y);
@@ -119,6 +122,7 @@ export class Brunei extends PIXI.Container {
                 this.area2.endFill();
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area4.beginFill(color);
                 this.area4.moveTo(0, this._area2_0_y);

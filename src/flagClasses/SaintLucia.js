@@ -22,10 +22,10 @@ export class SaintLucia extends PIXI.Container {
         this.area4Height = 0.41 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); 
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); 
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); 
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); 
 
         //wrong colors
         this.wrongColor1 = 0x0000ff;

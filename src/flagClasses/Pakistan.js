@@ -17,8 +17,8 @@ export class Pakistan extends PIXI.Container {
         this.area2X = 0.22 * this._flagWidth;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
 
         //wrong colors
         this.wrongColor1 = 0xf22834;
@@ -59,12 +59,14 @@ export class Pakistan extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.drawRect(0, 0, this._flagWidth, this._flagHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.drawRect(this.area2X, 0 , this._flagWidth - this.area2X, this._flagHeight);

@@ -1,7 +1,138 @@
 {
   "flags" : [
     {
-      "id" : "1",
+      "id" : "flag159",
+      "country": "Wales",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0x18a93f" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xff0000", "0x0000ff", "0xffff00", "0x000000"]
+    },
+    {
+      "id" : "flag158",
+      "country": "Scotland",
+      "correctColors": [
+        { "area1": "0x265db3" },
+        { "area2": "0x265db3" },
+        { "area3": "0x265db3" },
+        { "area4": "0x265db3" },
+        { "area5": "0xffffff" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xff0000", "0xffff00", "0x16b616", "0x000000"]
+    },
+    {
+      "id" : "flag157",
+      "country": "Zimbabwe",
+      "correctColors": [
+        { "area1": "0x0a630c" },
+        { "area2": "0xfed130" },
+        { "area3": "0xd20915" },
+        { "area4": "0x000000" },
+        { "area5": "0xd20915" },
+        { "area6": "0xfed130" },
+        { "area7": "0x0a630c" },
+        { "area8": "0x000000" },
+        { "area9": "0xffffff" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff"]
+    },
+    {
+      "id" : "flag156",
+      "country": "Yemen",
+      "correctColors": [
+        { "area1": "0xbe2a2b" },
+        { "area2": "0xffffff" },
+        { "area3": "0x000000" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x00ff00", "0x0000ff", "0xff33ff"]
+    },
+    { "id" : "flag155",
+      "country": "Vietnam",
+      "correctColors": [
+        { "area1": "0xda251d" },
+        { "area2": "0xffff00" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x00aa00", "0x7654cc", "0x0000ff", "0x000000"]
+    },
+    {
+      "id" : "flag154",
+      "country": "Venezuela",
+      "correctColors": [
+        { "area1": "0xfecb2f" },
+        { "area2": "0x04287b" },
+        { "area3": "0xcc1930" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x00ff00", "0x000000", "0xffffff"]
+    },
+    {
+      "id" : "flag153",
+      "country": "Vanuatu",
+      "correctColors": [
+        { "area1": "0xcf1638" },
+        { "area2": "0x149446" },
+        { "area3": "0x000000" },
+        { "area4": "0xfbcc33" }
+      ],
+      "excludedAreas" : ["area4"],
+      "wrongColors" : ["0x0000ff", "0xc25b07", "0xffffff"]
+    },
+    {
+      "id" : "flag152",
+      "country": "Uzbekistan",
+      "correctColors": [
+        { "area1": "0x179ab4" },
+        { "area2": "0xcb162c" },
+        { "area3": "0x2ab342" },
+        { "area4": "0xffffff" }
+      ],
+      "excludedAreas" : ["area2"],
+      "wrongColors" : ["0xffbbaa", "0x000000", "0xffff00"]
+    },
+    {
+      "id" : "flag151",
+      "country": "Ukraine",
+      "correctColors": [
+        { "area1": "0x0057b7" },
+        { "area2": "0xffd700" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0xff0000", "0x000000", "0xffffff", "0x6734ab"]
+    },
+    {
+      "id" : "flag150",
+      "country": "Uganda",
+      "correctColors": [
+        { "area1": "0x000000" },
+        { "area2": "0xffe634" },
+        { "area3": "0xdc3b1c" },
+        { "area4": "0x000000" },
+        { "area5": "0xffe634" },
+        { "area6": "0xdc3b1c" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0xffffff", "0x17be17"]
+    },
+    {
+      "id" : "flag149",
+      "country": "United Arab Emirates",
+      "correctColors": [
+        { "area1": "0x00843D" },
+        { "area2": "0xffffff" },
+        { "area3": "0x000000" },
+        { "area4": "0xFF0000" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x0000ff", "0xffff00"]
+    },
+    {
+      "id" : "flag148",
       "country": "Trinidad and Tobago",
       "correctColors": [
         { "area1": "0xc9303a" },
@@ -10,10 +141,10 @@
         { "area4": "0x000000" }
       ],
       "excludedAreas" : ["area3"],
-      "wrongColors" : ["0x0000ff", "0xffff00", "0x00ffff"]
+      "wrongColors" : ["0x0000ff", "0xffff00", "0x00ffff", "0x00ff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag147",
       "country": "Tongo",
       "correctColors": [
         { "area1": "0x1b8514" },
@@ -27,7 +158,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag146",
       "country": "East Timor",
       "correctColors": [
         { "area1": "0xc9091c" },
@@ -38,7 +169,7 @@
       "wrongColors" : ["0x0000ff", "0x00ff00", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag145",
       "country": "Thailand",
       "correctColors": [
         { "area1": "0x982432" },
@@ -51,7 +182,7 @@
       "wrongColors" : ["0xffff00", "0x000000", "0x35b235"]
     },
     {
-      "id" : "1",
+      "id" : "flag144",
       "country": "Tanzania",
       "correctColors": [
         { "area1": "0x54b44a" },
@@ -63,7 +194,7 @@
       "wrongColors" : ["0xff00b9", "0xffffff", "0xff0000" ]
     },
     {
-      "id" : "1",
+      "id" : "flag143",
       "country": "Tajikistan",
       "correctColors": [
         { "area1": "0xca0814" },
@@ -74,7 +205,7 @@
       "wrongColors" : ["0xffff00", "0x0000ff", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag142",
       "country": "Syria",
       "correctColors": [
         { "area1": "0xcb162c" },
@@ -85,7 +216,7 @@
       "wrongColors" : ["0xffff00", "0x0000ff", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag141",
       "country": "Switzerland",
       "correctColors": [
         { "area1": "0xea3323" },
@@ -95,7 +226,7 @@
       "wrongColors" : ["0x0000ff", "0x3a9f1a", "0x000000", "0xaaffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag140",
       "country": "Sweden",
       "correctColors": [
         { "area1": "0x2d68a4" },
@@ -108,7 +239,7 @@
       "wrongColors" : ["0x000000", "0x3a9f1a", "0xff0000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag139",
       "country": "Suriname",
       "correctColors": [
         { "area1": "0x3a7d42" },
@@ -120,7 +251,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffff00", "0xc2199d"]
     },
     {
-      "id" : "1",
+      "id" : "flag138",
       "country": "Sudan",
       "correctColors": [
         { "area1": "0xD21034" },
@@ -132,7 +263,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag137",
       "country": "StVincent and Grenadines",
       "correctColors": [
         { "area1": "0x0c5ba8" },
@@ -143,7 +274,7 @@
       "wrongColors" : ["0xff0000", "0x000000", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag136",
       "country": "Sri Lanka",
       "correctColors": [
         { "area1": "0xfdb62b" },
@@ -155,7 +286,7 @@
       "wrongColors" : ["0x0000ff", "0xff00ff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag135",
       "country": "Spain",
       "correctColors": [
         { "area1": "0xa81821" },
@@ -166,7 +297,7 @@
       "wrongColors" : ["0x0000ff", "0x12af12", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag134",
       "country": "South Sudan",
       "correctColors": [
         { "area1": "0x000000" },
@@ -179,7 +310,7 @@
       "wrongColors" : ["0xffff00", "0x00ffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag133",
       "country": "South Korea",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -190,7 +321,7 @@
       "wrongColors" : ["0xffff00", "0x00ffff", "0x00ff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag132",
       "country": "South Africa",
       "correctColors": [
         { "area1": "0xd04635" },
@@ -203,7 +334,7 @@
       "excludedAreas" : ["area3", "area5"],
       "wrongColors" : ["0xffff00", "0xc50999"]
     },
-    { "id" : "1",
+    { "id" : "flag131",
       "country": "Somalia",
       "correctColors": [
         { "area1": "0x5388d7" },
@@ -213,7 +344,7 @@
       "wrongColors" : ["0xff0000", "0x14c014", "0x0000ff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag130",
       "country": "Solomon Islands",
       "correctColors": [
         { "area1": "0x071cd2" },
@@ -224,7 +355,7 @@
       "wrongColors" : ["0xcf1638", "0xff00ff", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag129",
       "country": "Slovenia",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -235,7 +366,7 @@
       "wrongColors" : ["0x228822", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag128",
       "country": "Slovakia",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -246,7 +377,7 @@
       "wrongColors" : ["0x00ff00", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag127",
       "country": "Singapore",
       "correctColors": [
         { "area1": "0xdd0a16" },
@@ -256,7 +387,7 @@
       "wrongColors" : ["0x0000ff", "0x0fb90f", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag126",
       "country": "Sierra Leone",
       "correctColors": [
         { "area1": "0x54b44a" },
@@ -267,7 +398,7 @@
       "wrongColors" : ["0xff0000", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag125",
       "country": "Seychelles",
       "correctColors": [
         { "area1": "0x153984" },
@@ -280,7 +411,7 @@
       "wrongColors" : ["0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag124",
       "country": "Serbia",
       "correctColors": [
         { "area1": "0xc43840" },
@@ -291,7 +422,7 @@
       "wrongColors" : ["0x459516", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag123",
       "country": "Senegal",
       "correctColors": [
         { "area1": "0x14712a" },
@@ -302,7 +433,7 @@
       "wrongColors" : ["0x0000ff", "0xff00e4", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag122",
       "country": "Sao Tome and Principe",
       "correctColors": [
         { "area1": "0x21ac35" },
@@ -314,7 +445,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag121",
       "country": "San Marino",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -324,7 +455,7 @@
       "wrongColors" : ["0x0000ff", "0x3fd03f", "0xff0000", "0xe38803"]
     },
     {
-      "id" : "1",
+      "id" : "flag120",
       "country": "Samoa",
       "correctColors": [
         { "area1": "0xcb162c" },
@@ -334,7 +465,7 @@
       "wrongColors" : ["0xe38803", "0xffff00", "0xff00ff", "0x00ff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag119",
       "country": "Saint Lucia",
       "correctColors": [
         { "area1": "0x6acffc" },
@@ -346,7 +477,7 @@
       "wrongColors" : ["0xff0000", "0xff00ff", "0x19b219"]
     },
     {
-      "id" : "1",
+      "id" : "flag118",
       "country": "Saint Kitt And Nevis",
       "correctColors": [
         { "area1": "0x3a9f1a" },
@@ -358,7 +489,7 @@
       "wrongColors" : ["0x0000ff", "0xffffff", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag117",
       "country": "Rwanda",
       "correctColors": [
         { "area1": "0x1ba2dc" },
@@ -369,7 +500,7 @@
       "wrongColors" : ["0xff00ff", "0xff0000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag116",
       "country": "Russia",
       "correctColors": [
         { "area1": "0xFFFFFF" },
@@ -380,7 +511,7 @@
       "wrongColors" : ["0x16b916", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag115",
       "country": "Romania",
       "correctColors": [
         { "area1": "0x002B7F" },
@@ -391,7 +522,7 @@
       "wrongColors" : ["0x1d921d", "0xffffff", "0x972797"]
     },
     {
-      "id" : "1",
+      "id" : "flag114",
       "country": "Qatar",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -401,7 +532,7 @@
       "wrongColors" : ["0x0001ff", "0x000000", "0xffec00", "0x009600"]
     },
     {
-      "id" : "1",
+      "id" : "flag113",
       "country": "Portugal",
       "correctColors": [
         { "area1": "0x0a650c" },
@@ -411,7 +542,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag112",
       "country": "Poland",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -421,7 +552,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffff00", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag111",
       "country": "Philippines",
       "correctColors": [
         { "area1": "0x073ca5" },
@@ -432,7 +563,7 @@
       "wrongColors" : ["0x0000ff", "0x0e810e", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag110",
       "country": "Peru",
       "correctColors": [
         { "area1": "0xd7172b" },
@@ -443,7 +574,7 @@
       "wrongColors" : ["0x0000ff", "0x1f941f", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag109",
       "country": "Paraguay",
       "correctColors": [
         { "area1": "0xd22d27" },
@@ -454,7 +585,7 @@
       "wrongColors" : ["0x00ff00", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag108",
       "country": "Papua New Guinea",
       "correctColors": [
         { "area1": "0xfd0d1c" },
@@ -464,7 +595,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0xff00ff", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag107",
       "country": "Panama",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -476,7 +607,7 @@
       "wrongColors" : ["0xffff00", "0x16a316", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag106",
       "country": "Palestine",
       "correctColors": [
         { "area1": "0x000000" },
@@ -488,7 +619,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag105",
       "country": "Palau",
       "correctColors": [
         { "area1": "0x4498f8" },
@@ -498,7 +629,7 @@
       "wrongColors" : ["0xf22834", "0xaa00ff", "0xffffff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag104",
       "country": "Pakistan",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -508,7 +639,7 @@
       "wrongColors" : ["0xf22834", "0xffff00", "0x0000ff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag103",
       "country": "Oman",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -520,7 +651,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag102",
       "country": "Norway",
       "correctColors": [
         { "area1": "0xBA0C2F" },
@@ -534,7 +665,7 @@
       "wrongColors" : ["0x00ff00", "0xffff00", "0x000000", "0xae13ae"]
     },
     {
-      "id" : "1",
+      "id" : "flag101",
       "country": "North Korea",
       "correctColors": [
         { "area1": "0x3f5896" },
@@ -546,7 +677,7 @@
       "wrongColors" : ["0x000000", "0x245f0f", "0xfff500", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag100",
       "country": "Nigeria",
       "correctColors": [
         { "area1": "0x008753" },
@@ -557,7 +688,7 @@
       "wrongColors" : ["0x00ffff", "0x000000", "0xff0000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag99",
       "country": "Niger",
       "correctColors": [
         { "area1": "0xd05c27" },
@@ -569,7 +700,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0x000000"]
     },
     {
-      "id": "1",
+      "id": "flag98",
       "country": "Netherlands",
       "correctColors": [
         { "area1": "0xA91F32" },
@@ -580,7 +711,7 @@
       "wrongColors" : ["0xfeb12e", "0x000000", "0x0f8f0f"]
     },
     {
-      "id": "1",
+      "id": "flag97",
       "country": "Nauru",
       "correctColors": [
         { "area1": "0x03246e" },
@@ -591,7 +722,7 @@
       "wrongColors" : ["0xf6224e", "0x72f622", "0x000000",  "0xffffff" ]
     },
     {
-      "id" : "1",
+      "id" : "flag96",
       "country": "Namimbia",
       "correctColors": [
         { "area1": "0x3863a0" },
@@ -603,7 +734,7 @@
       "wrongColors" : ["0xff9100", "0xffffff", "0x000000" ]
     },
     {
-      "id" : "1",
+      "id" : "flag95",
       "country": "Myanmar",
       "correctColors": [
         { "area1": "0xfdca2f" },
@@ -614,7 +745,7 @@
       "wrongColors" : ["0x0000ff", "0xff9300", "0xff9300" ]
     },
     {
-      "id" : "1",
+      "id" : "flag94",
       "country": "Mozambique",
       "correctColors": [
         { "area1": "0x159918" },
@@ -627,7 +758,7 @@
       "wrongColors" : ["0x0000ff", "0x5c065c"]
    },
     {
-      "id" : "1",
+      "id" : "flag93",
       "country": "Mongolia",
       "correctColors": [
         { "area1": "0xd82438" },
@@ -638,7 +769,7 @@
       "wrongColors" : ["0x00ff00", "0x000000", "0xffffff", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag92",
       "country": "Monaco",
       "correctColors": [
         { "area1": "0xff0000" },
@@ -648,7 +779,7 @@
       "wrongColors" : ["0x0000ff", "0x118111", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag91",
       "country": "Moldova",
       "correctColors": [
         { "area1": "0x063599" },
@@ -659,7 +790,7 @@
       "wrongColors" : ["0xffffff", "0x00ff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag90",
       "country": "Mexico",
       "correctColors": [
         { "area1": "0x0b6848" },
@@ -670,7 +801,7 @@
       "wrongColors" : ["0xffff00", "0x000000", "0x0000ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag89",
       "country": "Mauritius",
       "correctColors": [
         { "area1": "0xEB2436" },
@@ -682,7 +813,7 @@
       "wrongColors" : ["0xffffff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag88",
       "country": "Mauritania",
       "correctColors": [
         { "area1": "0xcb2d41" },
@@ -693,7 +824,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffff00", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag87",
       "country": "Malta",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -703,7 +834,7 @@
       "wrongColors" : ["0x12843e", "0x000000", "0x00ffff", "0x8f1e97"]
     },
     {
-      "id" : "1",
+      "id" : "flag86",
       "country": "Mali",
       "correctColors": [
         { "area1": "0x14B53A" },
@@ -714,7 +845,7 @@
       "wrongColors" : ["0x0000ff", "0xffffff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag85",
       "country": "Maldives",
       "correctColors": [
         { "area1": "0xf22834" },
@@ -724,7 +855,7 @@
       "wrongColors" : ["0x000000", "0x0000ff", "0xffff00", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag84",
       "country": "Malawi",
       "correctColors": [
         { "area1": "0x000000" },
@@ -735,7 +866,7 @@
       "wrongColors" : ["0xffff00", "0xae0cd4", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag83",
       "country": "Madagascar",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -746,7 +877,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag82",
       "country": "Luxembourg",
       "correctColors": [
         { "area1": "0xEF3340" },
@@ -757,7 +888,7 @@
       "wrongColors" : ["0x11af11", "0xFFCE00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag81",
       "country": "Lithuania",
       "correctColors": [
         { "area1": "0xf3be42" },
@@ -768,7 +899,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag80",
       "country": "Liechtenstein",
       "correctColors": [
         { "area1": "0x042e7d" },
@@ -778,7 +909,7 @@
       "wrongColors" : ["0xffffff", "0x118111", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag79",
       "country": "Libya",
       "correctColors": [
         { "area1": "0xe40b21" },
@@ -789,7 +920,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag78",
       "country": "Lesotho",
       "correctColors": [
         { "area1": "0x05279c" },
@@ -800,7 +931,7 @@
       "wrongColors" : ["0xff0000", "0xffff00", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag77",
       "country": "Lebanon",
       "correctColors": [
         { "area1": "0xeb1c2a" },
@@ -811,7 +942,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xff00ff", "0x00ff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag76",
       "country": "Latvia",
       "correctColors": [
         { "area1": "0x94363a" },
@@ -822,7 +953,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0xffff00", "0x00ffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag75",
       "country": "Laos",
       "correctColors": [
         { "area1": "0xbe2a2c" },
@@ -834,7 +965,7 @@
       "wrongColors" : ["0x28780a", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag74",
       "country": "Kuwait",
       "correctColors": [
         { "area1": "0x347843" },
@@ -846,7 +977,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag73",
       "country": "Kenya",
       "correctColors": [
         { "area1": "0x000000" },
@@ -858,7 +989,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0xff00b5"]
     },
     {
-      "id" : "1",
+      "id" : "flag72",
       "country": "Jordan",
       "correctColors": [
         { "area1": "0x000000" },
@@ -870,7 +1001,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag71",
       "country": "Japan",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -880,7 +1011,7 @@
       "wrongColors" : ["0x000000", "0x0000ff", "0x20aa20", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag70",
       "country": "Jamaica",
       "correctColors": [
         { "area1": "0xf4bc44" },
@@ -893,7 +1024,7 @@
       "wrongColors" : ["0xff0000", "0x0000ff", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag69",
       "country": "Ivory Coast",
       "correctColors": [
         { "area1": "0xe78632" },
@@ -904,7 +1035,7 @@
       "wrongColors" : ["0xff0000", "0x000000", "0x0000ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag68",
       "country": "Italy",
       "correctColors": [
         { "area1": "0x008C45" },
@@ -915,7 +1046,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag67",
       "country": "Ireland",
       "correctColors": [
         { "area1": "0x169B62" },
@@ -926,7 +1057,7 @@
       "wrongColors" : ["0x00ffff", "0xff0000", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag66",
       "country": "Iraq",
       "correctColors": [
         { "area1": "0xcb162c" },
@@ -937,7 +1068,7 @@
       "wrongColors" : ["0x0000ff", "0x0e810e", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag65",
       "country": "Iran",
       "correctColors": [
         { "area1": "0x2b9d44" },
@@ -948,7 +1079,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag64",
       "country": "Indonesia",
       "correctColors": [
         { "area1": "0xFF0000" },
@@ -958,7 +1089,7 @@
       "wrongColors" : ["0x0000ff", "0x118111", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag63",
       "country": "India",
       "correctColors": [
         { "area1": "0xfd9941" },
@@ -969,7 +1100,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xbf1899"]
     },
     {
-      "id" : "1",
+      "id" : "flag62",
       "country": "Iceland",
       "correctColors": [
         { "area1": "0x02529C" },
@@ -983,7 +1114,7 @@
       "wrongColors" : ["0x00ff00", "0xffff00", "0x000000", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag61",
       "country": "Hungary",
       "correctColors": [
         { "area1": "0xCE2939" },
@@ -994,7 +1125,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag60",
       "country": "Honduras",
       "correctColors": [
         { "area1": "0x2bc3dd" },
@@ -1005,7 +1136,7 @@
       "wrongColors" : ["0xff0000", "0xffff00", "0x000000", "0x077a07"]
     },
     {
-      "id" : "1",
+      "id" : "flag59",
       "country": "Haiti",
       "correctColors": [
         { "area1": "0x05279c" },
@@ -1015,7 +1146,7 @@
       "wrongColors" : ["0x0f9f0f", "0xff00ff", "0xc25f0d", "0xffd000"]
     },
     {
-      "id" : "1",
+      "id" : "flag58",
       "country": "Guyana",
       "correctColors": [
         { "area1": "0x3d921b" },
@@ -1028,7 +1159,7 @@
       "wrongColors" : ["0x0000ff", "0xff00ff", "0xff9000"]
     },
     {
-      "id" : "1",
+      "id" : "flag57",
       "country": "Guinea Bissau",
       "correctColors": [
         { "area1": "0xcc172d" },
@@ -1039,7 +1170,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag56",
       "country": "Guinea",
       "correctColors": [
         { "area1": "0xCE1126" },
@@ -1050,7 +1181,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xc90cc9"]
     },
     {
-      "id" : "1",
+      "id" : "flag55",
       "country": "Guatemala",
       "correctColors": [
         { "area1": "0x4d98cd" },
@@ -1061,7 +1192,7 @@
       "wrongColors" : ["0x14b714", "0x000000", "0xff0000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag54",
       "country": "Grenada",
       "correctColors": [
         { "area1": "0xcb162c" },
@@ -1074,7 +1205,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag53",
       "country": "Ghana",
       "correctColors": [
         {  "area1": "0xcc172d" },
@@ -1085,7 +1216,7 @@
       "wrongColors" : ["0x0000ff", "0xffffff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag52",
       "country": "Germany",
       "correctColors": [
         { "area1": "0x000000" },
@@ -1096,7 +1227,7 @@
       "wrongColors" : ["0x469d65", "0xffffff", "0x0000ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag51",
       "country": "Gambia",
       "correctColors": [
         { "area1": "0xfc0d1c" },
@@ -1108,7 +1239,7 @@
       "wrongColors" : ["0xffff00", "0x000000", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag50",
       "country": "Gabon",
       "correctColors": [
         { "area1": "0x469d66" },
@@ -1119,7 +1250,7 @@
       "wrongColors" : ["0x000000","0xffffff", "0xff0000"]
     },
     {
-      "id" : "1",
+      "id" : "flag49",
       "country": "France",
       "correctColors": [
         { "area1": "0x0055A4" },
@@ -1130,7 +1261,7 @@
       "wrongColors" : ["0x417328", "0x000000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag48",
       "country": "Finland",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -1143,7 +1274,7 @@
       "wrongColors" : ["0x000000", "0xff0000", "0x00ff00", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag47",
       "country": "Ethiopia",
       "correctColors": [
         { "area1": "0x2f8b1a" },
@@ -1154,7 +1285,7 @@
       "wrongColors" : ["0x0000ff", "0xffffff", "0xe111ba"]
     },
     {
-      "id" : "1",
+      "id" : "flag46",
       "country": "Esthonia",
       "correctColors": [
         { "area1": "0x3171c9" },
@@ -1165,7 +1296,7 @@
       "wrongColors" : ["0xff0000", "0x0a870a", "0xff00ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag45",
       "country": "Eritrea",
       "correctColors": [
         { "area1": "0x2b9c4a" },
@@ -1176,7 +1307,7 @@
       "wrongColors" : ["0xfafc00", "0x000000", "0xf250d4"]
     },
     {
-      "id" : "1",
+      "id" : "flag44",
       "country": "Equatorial Guinea",
       "correctColors": [
         { "area1": "0x419918" },
@@ -1188,8 +1319,8 @@
       "wrongColors" : ["0xff0000", "0x135305", "0xffff00"]
     },
     {
+      "id" : "flag43",
       "country": "El Salvador",
-      "id" : "1",
       "correctColors": [
         { "area1": "0x154aac" },
         { "area2": "0xffffff" },
@@ -1199,7 +1330,7 @@
       "wrongColors" : ["0xff6c00", "0x166b05", "0xff0000", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag42",
       "country": "Egypt",
       "correctColors": [
         { "area1": "0xcb162c" },
@@ -1210,7 +1341,7 @@
       "wrongColors" : ["0x0f9f0f", "0x0e0e74", "0xffd000"]
     },
     {
-      "id" : "1",
+      "id" : "flag41",
       "country": "Ecuador",
       "correctColors": [
         { "area1": "0xfee633" },
@@ -1221,7 +1352,7 @@
       "wrongColors" : ["0xffffff", "0x000000", "0x2a7d07" ]
     },
     {
-      "id" : "1",
+      "id" : "flag40",
       "country": "Dominican Republic",
       "correctColors": [
         { "area1": "0x063599" },
@@ -1234,7 +1365,7 @@
       "wrongColors" : ["0x000000", "0x3a9f1a", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag39",
       "country": "Djibouti",
       "correctColors": [
         { "area1": "0x699cfc" },
@@ -1245,7 +1376,7 @@
       "wrongColors" : ["0x000000", "0xff0000", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag38",
       "country": "Denmark",
       "correctColors": [
         { "area1": "0xb72831" },
@@ -1258,7 +1389,7 @@
       "wrongColors" : ["0x000000", "0x3a9f1a", "0xffff00", "0x0000ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag37",
       "country": "Czech Republic",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -1269,7 +1400,7 @@
       "wrongColors" : ["0x000000", "0x3a9f1a", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag36",
       "country": "Cuba",
       "correctColors": [
         { "area1": "0x0f56ec" },
@@ -1283,7 +1414,7 @@
       "wrongColors" : ["0x000000", "0x3a9f1a", "0xffff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag35",
       "country": "Croatia",
       "correctColors": [
         { "area1": "0xfc0d1b" },
@@ -1294,7 +1425,7 @@
       "wrongColors" : []
     },
     {
-      "id" : "1",
+      "id" : "flag34",
       "country": "Costa Rica",
       "correctColors": [
         { "area1": "0x0516b1" },
@@ -1307,7 +1438,7 @@
       "wrongColors" : ["0x000000", "0xff9100", "0x3a9f1a"]
     },
     {
-      "id" : "1",
+      "id" : "flag33",
       "country": "Congo",
       "correctColors": [
         { "area1": "0x1783fc" },
@@ -1319,7 +1450,7 @@
       "wrongColors" : ["0xff9100", "0xffffff", "0x3a9f1a", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag32",
       "country": "Comoros",
       "correctColors": [
         { "area1": "0xfffd38" },
@@ -1332,7 +1463,7 @@
       "wrongColors" : ["0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag31",
       "country": "Colombia",
       "correctColors": [
         { "area1": "0xFCD116" },
@@ -1343,7 +1474,7 @@
       "wrongColors" : ["0x000000", "0x3a9f1a", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag30",
       "country": "Chile",
       "correctColors": [
         { "area1": "0x073da4" },
@@ -1354,7 +1485,7 @@
       "wrongColors" : ["0xff9100", "0x3a9f1a", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag29",
       "country": "Chad",
       "correctColors": [
         { "area1": "0x092060" },
@@ -1365,7 +1496,7 @@
       "wrongColors" : ["0x3a9f1a", "0x000000", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag28",
       "country": "Central African Republic",
       "correctColors": [
         { "area1": "0x0a23fa" },
@@ -1382,7 +1513,7 @@
       "wrongColors" : ["0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag27",
       "country": "Cameroon",
       "correctColors": [
         { "area1": "0x0f795e" },
@@ -1394,7 +1525,7 @@
     },
     {
       "country": "Cambodia",
-      "id" : "1",
+      "id" : "flag26",
       "correctColors": [
         { "area1": "0x09339e" },
         { "area2": "0xde0b2d" },
@@ -1404,7 +1535,7 @@
       "wrongColors" : ["0xff9100", "0x000000", "0xffffff", "0x369b17"]
     },
     {
-      "id" : "1",
+      "id" : "flag25",
       "country": "Burundi",
       "correctColors": [
         { "area1": "0xda3832" },
@@ -1417,7 +1548,7 @@
       "wrongColors" : ["0x000000","0x0a00b1", "0xffeb00"]
     },
     {
-      "id" : "1",
+      "id" : "flag24",
       "country": "Burkina Faso",
       "correctColors": [
         { "area1": "0xdb0a16" },
@@ -1427,7 +1558,7 @@
       "wrongColors" : ["0x094bb1", "0xff9100", "0xffffff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag23",
       "country": "Bulgaria",
       "correctColors": [
         {  "area1": "0xffffff" },
@@ -1438,7 +1569,7 @@
       "wrongColors" : ["0x0000ff", "0xffff00", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag22",
       "country": "Brunei",
       "correctColors": [
         { "area1": "0xf7df38" },
@@ -1450,7 +1581,7 @@
       "wrongColors" : ["0xff0000", "0x228f19", "0x0000ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag21",
       "country": "Brazil",
       "correctColors": [
         { "area1": "0x2a9d49" },
@@ -1460,7 +1591,7 @@
       "wrongColors" : ["0x000000", "0xffffff", "0x0000ff", "0xff0000"]
     },
     {
-      "id" : "1",
+      "id" : "flag20",
       "country": "Botswana",
       "correctColors": [
         { "area1": "0x55baec" },
@@ -1472,7 +1603,7 @@
       "wrongColors" : ["0xe61e2f", "0x3e9d07", "0xffbb00", "0x9400ff"]
     },
     {
-      "id" : "1",
+      "id" : "flag19",
       "country": "Bosniaherzegovina",
       "correctColors": [
         { "area1": "0x031096" },
@@ -1483,7 +1614,7 @@
       "wrongColors" : ["0x000000", "0xffffff", "0xff0000", "0x00ff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag18",
       "country": "Bolivia",
       "correctColors": [
         { "area1": "0xd32d27" },
@@ -1494,7 +1625,7 @@
       "wrongColors" : ["0x000000", "0xffffff", "0x1167fa"]
     },
     {
-      "id" : "1",
+      "id" : "flag17",
       "country": "Bhutan",
       "correctColors": [
         { "area1": "0xfed43b" },
@@ -1504,7 +1635,7 @@
       "wrongColors" : ["0x2659fc", "0x000000", "0x50fc26", "0x8f1e97"]
     },
     {
-      "id" : "1",
+      "id" : "flag16",
       "country": "Benin",
       "correctColors": [
         {  "area1": "0x3c8655" },
@@ -1515,7 +1646,7 @@
       "wrongColors" : ["0x0000ff", "0x000000", "0xffffff" ]
     },
     {
-      "id" : "1",
+      "id" : "flag15",
       "country": "Belize",
       "correctColors": [
         { "area1": "0xcc172d" },
@@ -1526,7 +1657,7 @@
       "wrongColors" : ["0x00ff00", "0x000000", "0xffffff", "0xff8100"]
     },
     {
-      "id" : "1",
+      "id" : "flag14",
       "country": "Belgium",
       "correctColors": [
         { "area1": "0x000000" },
@@ -1537,7 +1668,7 @@
       "wrongColors" : ["0x12843e", "0xffffff", "0x8f1e97"]
     },
     {
-      "id" : "1",
+      "id" : "flag13",
       "country": "Belarus",
       "correctColors": [
         { "area1": "0xb0060f" },
@@ -1547,7 +1678,7 @@
       "wrongColors" : ["0x1a5b9d", "0x000000", "0xfff400", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag12",
       "country": "Barbados",
       "correctColors": [
         { "area1": "0x03297c" },
@@ -1558,7 +1689,7 @@
       "wrongColors" : ["0x12843e", "0x000000", "0x8f1e97", "0x8f1e97"]
     },
     {
-      "id" : "1",
+      "id" : "flag11",
       "country": "Bangladesh",
       "correctColors": [
         { "area1": "0x006b50" },
@@ -1568,7 +1699,7 @@
       "wrongColors" : ["0x8f1e97", "0x0a46b2", "0xffffff", "0x000000"]
     },
     {
-      "id" : "1",
+      "id" : "flag10",
       "country": "Bahrain",
       "correctColors": [
         { "area1": "0xffffff" },
@@ -1578,7 +1709,7 @@
       "wrongColors" : ["0x0001ff", "0x000000", "0xffec00", "0x009600"]
     },
     {
-      "id" : "1",
+      "id" : "flag09",
       "country": "Bahamas",
       "correctColors": [
         { "area1": "0x00778B" },
@@ -1590,7 +1721,7 @@
       "wrongColors" : ["0xff0000", "0x135305", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag08",
       "country": "Azerbaijan",
       "correctColors": [
         { "area1": "0x1eb9e2" },
@@ -1601,7 +1732,7 @@
       "wrongColors" : [ "0x000000", "0xffff00", "0xf68522" ]
     },
     {
-      "id" : "1",
+      "id" : "flag07",
       "country": "Austria",
       "correctColors": [
         { "area1": "0xb82831" },
@@ -1612,7 +1743,7 @@
       "wrongColors" : ["0x0a1dd4", "0xfcff00", "0x000000", "0x1f9a00"]
     },
     {
-      "id" : "1",
+      "id" : "flag06",
       "country": "Armenia",
       "correctColors": [
         { "area1": "0xae242e"},
@@ -1623,7 +1754,7 @@
       "wrongColors" : ["0x32850e", "0xae0cd4", "0xffffff"]
     },
     {
-      "id" : "1",
+      "id" : "flag05",
       "country": "Argentina",
       "correctColors": [
         { "area1": "0x9cd1f1"},
@@ -1634,7 +1765,7 @@
       "wrongColors" : ["0xf6224e", "0x72f622", "0xf68522", "0x063155"]
     },
     {
-      "id" : "1",
+      "id" : "flag04",
       "country": "Antigua and Barbuda",
       "correctColors": [
         { "area1": "0xdf0a16" },
@@ -1647,7 +1778,7 @@
       "wrongColors" : ["0x0c9609", "0xb70d85"]
     },
     {
-      "id" : "1",
+      "id" : "flag03",
       "country": "Angola",
       "correctColors": [
         { "area1": "0xfc0d1b" },
@@ -1657,7 +1788,7 @@
       "wrongColors" : ["0x00ff00", "0x0f1c86", "0xffffff", "0x00ff00"]
     },
     {
-      "id" : "1",
+      "id" : "flag02",
       "country": "Andora",
       "correctColors": [
         { "area1": "0x0421a5" },
@@ -1668,7 +1799,7 @@
       "excludedAreas" : []
     },
     {
-      "id" : "1",
+      "id" : "flag01",
       "country": "Afghanistan",
       "correctColors": [
         { "area1" : "0x000000" },

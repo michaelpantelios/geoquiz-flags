@@ -17,9 +17,9 @@ export class Cameroon extends PIXI.Container{
         this._areaWidth = this._flagWidth * 0.33;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //green
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -71,18 +71,21 @@ export class Cameroon extends PIXI.Container{
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.drawRect(0, 0, this._areaWidth,  this._flagHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.drawRect(this._areaWidth, 0, this._areaWidth, this._flagHeight);
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle(this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
                 this.area3.drawRect(2 * this._areaWidth, 0, this._areaWidth, this._flagHeight);

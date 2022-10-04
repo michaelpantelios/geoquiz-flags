@@ -21,15 +21,15 @@ export class CentralAfricanRepublic extends PIXI.Container {
         this._emblemPos = new PIXI.Point(0.07 * this._flagWidth, 0.023 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // blue
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // white
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // green
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // yellow
-        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); // blue
-        this.area6Color = parseInt(this._flagData["correctColors"][5]["area6"]); // white
-        this.area7Color = parseInt(this._flagData["correctColors"][6]["area7"]); // green
-        this.area8Color = parseInt(this._flagData["correctColors"][7]["area8"]); // yellow
-        this.area9Color = parseInt(this._flagData["correctColors"][8]["area9"]); // red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); 
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); 
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); 
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); 
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); 
+        this.area6Color = parseInt(this._flagData["correctColors"][5]["area6"]); 
+        this.area7Color = parseInt(this._flagData["correctColors"][6]["area7"]); 
+        this.area8Color = parseInt(this._flagData["correctColors"][7]["area8"]); 
+        this.area9Color = parseInt(this._flagData["correctColors"][8]["area9"]); 
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -137,6 +137,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
     paintFlagArea(name, color){
         switch (name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.moveTo(0, 0);
@@ -147,6 +148,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.moveTo(0, 0);
@@ -158,6 +160,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area2.y = this._horizHeight;
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
                 this.area3.moveTo(0, 0);
@@ -169,6 +172,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area3.y = 2 * this._horizHeight;
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area4.beginFill(color);
                 this.area4.moveTo(0, 0);
@@ -180,6 +184,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area4.y = 3 * this._horizHeight;
                 break;
             case this.area5.name:
+                this.area5.clear();
                 this.area5.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area5.beginFill(color);
                 this.area5.moveTo(0, 0);
@@ -191,6 +196,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area5.x = this._flagWidth / 2 + this._verticalWidth / 2;
                 break;
             case this.area6.name:
+                this.area6.clear();
                 this.area6.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area6.beginFill(color);
                 this.area6.moveTo(0, 0);
@@ -203,6 +209,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area6.x = this._flagWidth / 2 + this._verticalWidth / 2;
                 break;
             case this.area7.name:
+                this.area7.clear();
                 this.area7.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area7.beginFill(color);
                 this.area7.moveTo(0, 0);
@@ -215,6 +222,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area7.x = this._flagWidth / 2 + this._verticalWidth / 2;
                 break;
             case this.area8.name:
+                this.area8.clear();
                 this.area8.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area8.beginFill(color);
                 this.area8.moveTo(0, 0);
@@ -227,6 +235,7 @@ export class CentralAfricanRepublic extends PIXI.Container {
                 this.area8.x = this._flagWidth / 2 + this._verticalWidth / 2;
                 break;
             case this.area9.name:
+                this.area9.clear();
                 this.area9.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area9.beginFill(color);
                 this.area9.moveTo(0, 0);

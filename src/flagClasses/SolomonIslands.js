@@ -24,9 +24,9 @@ export class SolomonIslands extends PIXI.Container {
         this.area2X2 = new PIXI.Point(this._flagWidth, 0.39 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //white
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

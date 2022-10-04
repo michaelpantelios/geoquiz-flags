@@ -20,11 +20,11 @@ export class DominicanDemocracy extends PIXI.Container {
         this.area5Height = 0.1979 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // red
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // red
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // red
-        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); // white
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); 
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); 
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); 
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); 
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); 
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

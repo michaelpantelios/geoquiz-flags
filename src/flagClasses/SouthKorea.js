@@ -28,9 +28,9 @@ export class SouthKorea extends PIXI.Container {
         // this.area3_ctx3 = new PIXI.Point(0.4 * this._flagWidth, 0.97 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
 
         //wrong colors
         this.wrongColor1 = 0xffff00;
@@ -96,31 +96,30 @@ export class SouthKorea extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.drawRect(0, 0, this._flagWidth, this._flagHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.drawCircle(this._flagWidth / 2, this._flagHeight / 2,this.circleRadius);
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle(this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
                 this.area3.moveTo(this.area3_1.x, this.area3_1.y);
                 this.area3.bezierCurveTo(this.area3_ctx1.x, this.area3_ctx1.y, this.area3_ctx2.x, this.area3_ctx2.y, this.area3_2.x, this.area3_2.y);
-                // this.area3.quadraticCurveTo(this.area3_ctx1.x, this.area3_ctx1.y, this.area3_2.x, this.area3_2.y);
-                // this.area3.lineTo(this.area3_3.x, this.area3_3.y);
                 this.area3.bezierCurveTo(this.area3_ctx3.x, this.area3_ctx3.y, this.area3_ctx4.x, this.area3_ctx4.y,  this.area3_3.x, this.area3_3.y);
-                // this.area3.quadraticCurveTo(this.area3_ctx2.x, this.area3_ctx2.y, this.area3_3.x, this.area3_3.y);
                 this.area3.lineTo(this.area3_4.x, this.area3_4.y);
                 this.area3.lineTo(this.area3_5.x, this.area3_5.y);
                 this.area3.lineTo(this.area3_6.x, this.area3_6.y);
                 this.area3.closePath();
-
                 this.area3.endFill();
                 break;
         }

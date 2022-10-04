@@ -94,6 +94,7 @@ export class AntiguaBarbuda extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle(this._lineWidth, 0x000000);
                 this.area1.beginFill(color);
                 this.area1.moveTo(0, 0);
@@ -103,6 +104,7 @@ export class AntiguaBarbuda extends PIXI.Container {
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle(this._lineWidth, 0x000000);
                 this.area2.moveTo(this._flagWidth/2, 0);
                 this.area2.beginFill(color);
@@ -113,18 +115,21 @@ export class AntiguaBarbuda extends PIXI.Container {
                 this.area2.x = this._flagWidth/2;
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle(this._lineWidth, 0x000000);
                 this.area3.beginFill(color);
                 this.area3.drawRect(0, 0, this._flagWidth, this._flagHeight * 0.30);
                 this.area3.endFill();
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle(this._lineWidth, 0x000000);
                 this.area4.beginFill(color, 1);
                 this.area4.drawRect(0, this._flagHeight * 0.30, this._flagWidth, this._flagHeight * 0.25);
                 this.area4.endFill();
                 break;
             case this.area5.name:
+                this.area5.clear();
                 this.area5.lineStyle(this._lineWidth, 0x000000);
                 this.area5.beginFill(color);
                 this.area5.drawRect(0, this._flagHeight * 0.55, this._flagWidth, this._flagHeight * 0.45);

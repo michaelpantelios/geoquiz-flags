@@ -18,11 +18,11 @@ export class Seychelles extends PIXI.Container {
         this.area4Y1 = 0.77 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //green
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //green
-        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]);
 
         //wrong colors
         this.wrongColor1 = 0x000000;

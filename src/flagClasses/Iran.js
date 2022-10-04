@@ -102,6 +102,7 @@ export class Iran extends PIXI.Container {
         console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, color, 1);
                 this.area1.beginFill(color);
                 this.area1.drawRect(0, 0, this._flagWidth, this._area1Height);
@@ -109,12 +110,14 @@ export class Iran extends PIXI.Container {
                 this.ribbonUpper.tint = byUser ? color : 0x888888;
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, color, 1);
                 this.area2.beginFill(color);
                 this.area2.drawRect(0, this._area1Height, this._flagWidth, this._area2Height);
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle(this._lineWidth, color, 1);
                 this.area3.beginFill(color);
                 this.area3.drawRect(0, this._area1Height + this._area2Height, this._flagWidth, this._area1Height);

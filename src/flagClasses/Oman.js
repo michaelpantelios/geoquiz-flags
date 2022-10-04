@@ -20,10 +20,10 @@ export class Oman extends PIXI.Container {
         this.emblemY = 0.03 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //green
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //green
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //green
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
 
         //wrong colors
         this.wrongColor1 = 0x0000ff;

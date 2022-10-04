@@ -22,12 +22,12 @@ export class Tongo extends PIXI.Container {
         this.emblemY = 0.11 * this._flagHeight;
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // green
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //red
-        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //red
-        this.area6Color = parseInt(this._flagData["correctColors"][5]["area6"]); //red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]);
+        this.area6Color = parseInt(this._flagData["correctColors"][5]["area6"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;

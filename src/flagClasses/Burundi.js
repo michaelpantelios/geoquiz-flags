@@ -32,11 +32,11 @@ export class Burundi extends PIXI.Container {
         this.point15 = new PIXI.Point(0, 0.19 * this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //green
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //red
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //green
-        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //white
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); 
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); 
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); 
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); 
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); 
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -106,6 +106,7 @@ export class Burundi extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle(this._lineWidth, 0x000000);
                 this.area1.beginFill(color);
                 this.area1.moveTo(0, 0);
@@ -117,6 +118,7 @@ export class Burundi extends PIXI.Container {
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle(this._lineWidth, 0x000000);
                 this.area2.beginFill(color);
                 this.area2.moveTo(this._flagWidth, 0.01 * this._flagHeight);
@@ -127,6 +129,7 @@ export class Burundi extends PIXI.Container {
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle(this._lineWidth, 0x000000);
                 this.area3.beginFill(color);
                 this.area3.moveTo(0, this._flagHeight);
@@ -138,6 +141,7 @@ export class Burundi extends PIXI.Container {
                 this.area3.endFill();
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle(this._lineWidth, 0x000000);
                 this.area4.beginFill(color);
                 this.area4.moveTo(0, 0.01 * this._flagHeight);
@@ -148,6 +152,7 @@ export class Burundi extends PIXI.Container {
                 this.area4.endFill();
                 break;
             case this.area5.name:
+                this.area5.clear();
                 // this.area5.lineStyle(this._lineWidth, 0xff0000);
                 this.area5.beginFill(color);
                 // this.area5.drawCircle(this._flagWidth / 2, this._flagHeight/2, 0.22 * this._flagWidth);

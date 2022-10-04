@@ -15,8 +15,8 @@ export class BurkinaFaso extends PIXI.Container{
         this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //white
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -58,12 +58,14 @@ export class BurkinaFaso extends PIXI.Container{
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.drawRect(0, 0, this._flagWidth, this._flagHeight / 2);
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.drawRect(0, this._flagHeight / 2, this._flagWidth, this._flagHeight / 2);

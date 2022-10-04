@@ -29,10 +29,10 @@ export class SaintKittsAndNevis extends PIXI.Container {
         this._area4_5 = new PIXI.Point(0, this._flagHeight);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); 
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); 
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); 
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); 
 
 
         this.area1 = new PIXI.Graphics();
@@ -111,6 +111,7 @@ export class SaintKittsAndNevis extends PIXI.Container {
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
                 this.area3.moveTo(this._area3_0.x, this._area3_0.y);
@@ -123,6 +124,7 @@ export class SaintKittsAndNevis extends PIXI.Container {
                 this.area3.endFill();
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area4.beginFill(color);
                 this.area4.moveTo(this._area4_0.x, this._area4_0.y);

@@ -21,17 +21,17 @@ export class TrinidadTobago extends PIXI.Container {
         this.area3_5 = new PIXI.Point(0, 0);
 
         this.area4_0 = new PIXI.Point(0.21 * this._flagWidth, 0);
-        this.area4_1 = new PIXI.Point(this._flagWidth,0.97 * this._flagWidth);
-        this.area4_2 = new PIXI.Point(this._flagWidth,this._flagWidth);
-        this.area4_3 = new PIXI.Point(0.698 * this._flagWidth, this._flagHeight);
+        this.area4_1 = new PIXI.Point(this._flagWidth,0.97 * this._flagHeight);
+        this.area4_2 = new PIXI.Point(this._flagWidth,this._flagHeight);
+        this.area4_3 = new PIXI.Point(0.78 * this._flagWidth, this._flagHeight);
         this.area4_4 = new PIXI.Point(0, 0.03 * this._flagHeight);
         this.area4_5 = new PIXI.Point(0, 0);
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // cyan
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // cyan
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); // cyan
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); // cyan
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); 
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); 
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); 
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); 
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -69,7 +69,6 @@ export class TrinidadTobago extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color,
             this.area4Color
         ].concat(this.wrongColors);
     }
@@ -89,6 +88,7 @@ export class TrinidadTobago extends PIXI.Container {
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.moveTo(this.area3_4.x, this.area3_4.y);
@@ -98,6 +98,7 @@ export class TrinidadTobago extends PIXI.Container {
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
                 this.area3.moveTo(this.area3_0.x, this.area3_0.y);
@@ -110,6 +111,7 @@ export class TrinidadTobago extends PIXI.Container {
                 this.area3.endFill();
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area4.beginFill(color);
                 this.area4.moveTo(this.area4_0.x, this.area4_0.y);
@@ -117,7 +119,7 @@ export class TrinidadTobago extends PIXI.Container {
                 this.area4.lineTo(this.area4_2.x, this.area4_2.y);
                 this.area4.lineTo(this.area4_3.x, this.area4_3.y);
                 this.area4.lineTo(this.area4_4.x, this.area4_4.y);
-                this.area4.lineTo(this.area4_5.x, this.area4_4.y);
+                this.area4.lineTo(this.area4_5.x, this.area4_5.y);
                 this.area4.closePath();
                 this.area4.endFill();
         }

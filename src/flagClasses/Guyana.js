@@ -13,11 +13,11 @@ export class Guyana extends PIXI.Container {
         this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // red
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); //blue
-        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]); //yellow
-        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]); //blue
-        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]); //yellow
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
+        this.area3Color = parseInt(this._flagData["correctColors"][2]["area3"]);
+        this.area4Color = parseInt(this._flagData["correctColors"][3]["area4"]);
+        this.area5Color = parseInt(this._flagData["correctColors"][4]["area5"]);
 
         this.point1Y = 0.04 * this._flagHeight;
         this.point2Y = 0.06 * this._flagHeight;
@@ -79,12 +79,14 @@ export class Guyana extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.drawRect(0, 0, this._flagWidth, this._flagHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.moveTo(0, 0);
@@ -94,6 +96,7 @@ export class Guyana extends PIXI.Container {
                 this.area2.endFill();
                 break;
             case this.area3.name:
+                this.area3.clear();
                 this.area3.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
                 this.area3.moveTo(0, this.point1Y);
@@ -103,6 +106,7 @@ export class Guyana extends PIXI.Container {
                 this.area3.endFill();
                 break;
             case this.area4.name:
+                this.area4.clear();
                 this.area4.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area4.beginFill(color);
                 this.area4.moveTo(0, 0);
@@ -112,12 +116,12 @@ export class Guyana extends PIXI.Container {
                 this.area4.endFill();
                 break;
             case this.area5.name:
+                this.area5.clear();
                 this.area5.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area5.beginFill(color);
                 this.area5.moveTo(0, this.point2Y);
                 this.area5.lineTo(this.area5Width, this._flagHeight / 2);
                 this.area5.lineTo(0, this.point3Y);
-                // this.area5.lineTo(0, this.point2Y);
                 this.area5.closePath();
                 this.area5.endFill();
                 break;

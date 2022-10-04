@@ -20,8 +20,8 @@ export class Bahrain extends PIXI.Container {
         this._rightStart = 0.4 * this._flagWidth;
         this._edgeHeight = 0.1 * this._flagHeight;
 
-        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]); // white
-        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]); // red
+        this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
+        this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
 
         this.area1 = new PIXI.Graphics();
         this.area1.interactive = true;
@@ -53,12 +53,14 @@ export class Bahrain extends PIXI.Container {
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
+                this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
                 this.area1.drawRect(0, 0, this._flagWidth, this._flagHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
+                this.area2.clear();
                 this.area2.lineStyle(this._lineWidth, 0x000000);
                 this.area2.beginFill(color);
                 this.area2.moveTo(0, 0);
