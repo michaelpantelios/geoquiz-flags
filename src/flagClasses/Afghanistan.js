@@ -1,19 +1,13 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import afganistan_emblem from "../assets/images/flagSpecials/afganistan/afganistan_emblem.png";
 
-export class Afghanistan extends PIXI.Container {
+export class Afghanistan extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
         this._areaWidth = this._flagWidth * 0.333;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -91,9 +85,13 @@ export class Afghanistan extends PIXI.Container {
                 this.area3.endFill();
                 break;
         }
+        this._userSolution[name] = this.toHexString(color);
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
+    toHexString(n) {
+        if(n < 0) {
+            n = 0xFFFFFFFF + n + 1;
+        }
+        return "0x" + ("000000" + n.toString(16).toUpperCase()).substr(-6);
     }
 }

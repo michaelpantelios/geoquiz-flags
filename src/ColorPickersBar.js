@@ -21,9 +21,9 @@ export class ColorPickersBar extends PIXI.Container {
 
         this._pickers = [];
 
-        console.log("pickers data: ",data);
-        console.log(`pickers flag this.width = ${data.width}`);
-        console.log(`pickers flag this.height = ${data.height}`);
+        // console.log("pickers data: ",data);
+        // console.log(`pickers flag this.width = ${data.width}`);
+        // console.log(`pickers flag this.height = ${data.height}`);
 
         let border = new PIXI.Graphics();
         border.lineStyle(2, 0xffffff, 1);

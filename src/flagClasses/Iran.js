@@ -99,7 +99,7 @@ export class Iran extends PIXI.Container {
     }
 
     paintFlagArea(name, color, byUser = true){
-        console.log(`paint area ${name} with color: ${color}`);
+        // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
                 this.area1.clear();

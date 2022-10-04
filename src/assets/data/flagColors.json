@@ -1803,8 +1803,8 @@
       "country": "Afghanistan",
       "correctColors": [
         { "area1" : "0x000000" },
-        { "area2": "0x4d33739" },
-        { "area3": "0x469652" }
+        { "area2" : "0xbd0712" },
+        { "area3" : "0x149818" }
       ],
       "wrongColors" : ["0xffffff", "0x334ee7", "0xeaff00"],
       "excludedAreas" : []

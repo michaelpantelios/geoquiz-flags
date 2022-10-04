@@ -181,6 +181,7 @@ export class Game extends PIXI.Container {
 
         let pickedColor = 0xbbbbbb;
         this._currentFlagIndex = 0;
+        this._currentFlag = {};
         this._flagsArray = [];
         this._flagRatio = 1.431;
 
@@ -731,10 +732,26 @@ export class Game extends PIXI.Container {
 
         nextY += this._pager.height + 20;
 
-        // let result = new Result({"width" : Game.FLAG_WIDTH, "height" : 200})
-        // result.x = this._pager.x;
-        // result.y = nextY;
-        // this.addChild(result);
+        const style = new PIXI.TextStyle({
+            fontFamily: 'Arial',
+            fontSize: 40,
+            fontWeight: 'bold',
+            fill: '#ffffff', // gradient
+        });
+
+        let btnSubmit = new PIXI.Text(">>>>SUBMIT<<<<", style);
+        btnSubmit.interactive = true;
+        btnSubmit.on("pointertap", ()=> this._onSubmit());
+        btnSubmit.x = document.documentElement.clientWidth / 2 - btnSubmit.width / 2;
+        btnSubmit.y = nextY;
+        this.addChild(btnSubmit);
+
+        nextY += btnSubmit.height + 20;
+
+        let result = new Result({"width" : this._appWidth, "height" : 200})
+        result.x = this._pager.x;
+        result.y = nextY;
+        this.addChild(result);
 
         if (this._country !== ""){
             let _index = _.findIndex(this._flagsArray, x => x.getFlagCountryName().toString().toLowerCase().includes(this._country.toString().toLowerCase()));
@@ -747,13 +764,43 @@ export class Game extends PIXI.Container {
 
     }
 
+    _onSubmit(){
+        console.log("lets see !! ")
+        console.log(this._currentFlag.getFlagCountryName());
+        console.log(this._currentFlag.getUserSolution());
+        let correctFlagData = this._allFlagsData[this._currentFlagIndex]["correctColors"];
+        console.log("correctFlagData = ", correctFlagData);
+        let userSolution = this._currentFlag.getUserSolution();
+        userSolution.forEach((item)=>{
+            let areas = Object.keys(item);
+            areas.forEach((key) => {
+                this._userSolution[key]= "0xbbbbbb";
+            })
+        })
+
+        // this._flagData["correctColors"].forEach((item) => {
+        //     console.log("item: ", item);
+        //     let areas = Object.keys(item);
+        //     areas.forEach((key) => {
+        //         this._userSolution[key]= "0xbbbbbb";
+        //     })
+        // })
+
+
+    }
+
     showFlag(){
         // console.log("showFlag");
         for (let i=0; i<this._flagsArray.length;i++){
             let flag = this._flagsArray[i];
             // console.log(`flag name: ${flag.getFlagCountryName()}`);
             // console.log(`data name: ${this._allFlagsData[i]["country"]}`);
-            flag.visible = flag.getFlagCountryName() === this._allFlagsData[this._currentFlagIndex]["country"];
+            if (flag.getFlagCountryName() === this._allFlagsData[this._currentFlagIndex]["country"]){
+                flag.visible = true;
+                this._currentFlag = flag;
+            } else {
+                flag.visible = false;
+            }
         }
         this.colorPickers.setColors(this._flagsArray[this._currentFlagIndex].getColorsForPickers());
         this._pager.setCountryName(this._allFlagsData[this._currentFlagIndex]["country"]);

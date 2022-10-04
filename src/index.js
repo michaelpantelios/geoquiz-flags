@@ -9,8 +9,8 @@ function initGame() {
         resolution:  1,
         antialias: true
     });
-    console.log("document.documentElement.clientWidth = "+document.documentElement.clientWidth);
-    console.log("document.documentElement.clientHeight = "+document.documentElement.clientHeight);
+    // console.log("document.documentElement.clientWidth = "+document.documentElement.clientWidth);
+    // console.log("document.documentElement.clientHeight = "+document.documentElement.clientHeight);
     document.body.appendChild(app.view);
 
     let providedSolved = new URLSearchParams(window.location.search).get("solved");
