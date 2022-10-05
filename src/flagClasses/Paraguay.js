@@ -1,20 +1,14 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import paraguay_emblem from "../assets/images/flagSpecials/paraguay/paraguay_emblem.png";
 
-export class Paraguay extends PIXI.Container {
+export class Paraguay extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
         this._areaHeight = this._flagHeight * 0.333;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
-
+       
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
         this.area2Color = parseInt(this._flagData["correctColors"][1]["area2"]);
@@ -59,6 +53,8 @@ export class Paraguay extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -94,8 +90,6 @@ export class Paraguay extends PIXI.Container {
         ].concat(this.wrongColors);
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 
 }

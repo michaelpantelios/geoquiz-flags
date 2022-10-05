@@ -1,16 +1,12 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 
-export class Switzerland extends  PIXI.Container {
+export class Switzerland extends  FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+    
 
         this.area2Point1 = new PIXI.Point(0.432 * this._flagWidth, 0.1845 * this._flagHeight);
         this.area2Point2 = new PIXI.Point(0.56 * this._flagWidth, 0.1845 * this._flagHeight);
@@ -56,6 +52,7 @@ export class Switzerland extends  PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -87,8 +84,6 @@ export class Switzerland extends  PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 
 }

@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import djibouti from "../assets/images/flagSpecials/djibouti/djibouti_emblem.png";
 
-export class Djibouti extends PIXI.Container {
+export class Djibouti extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this.area3Width = 0.53 * this._flagWidth;
         this.emblemX = 0.069 * this._flagWidth;
@@ -62,6 +55,8 @@ export class Djibouti extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         switch (name){
             case this.area1.name:
                 this.area1.clear();
@@ -106,7 +101,5 @@ export class Djibouti extends PIXI.Container {
         ].concat(this.wrongColors);
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

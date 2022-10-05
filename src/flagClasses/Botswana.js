@@ -1,16 +1,10 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 
-export class Botswana extends PIXI.Container {
+export class Botswana extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this._area1Height = 0.37 * this._flagHeight; // height of cyan areas
         this._area3Height = 0.25 * this._flagHeight; // white, non interactive
@@ -64,6 +58,7 @@ export class Botswana extends PIXI.Container {
     }
 
     paintFlagArea(name, color) {
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -97,7 +92,5 @@ export class Botswana extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

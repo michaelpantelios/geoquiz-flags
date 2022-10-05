@@ -37,7 +37,7 @@
         { "area8": "0x000000" },
         { "area9": "0xffffff" }
       ],
-      "excludedAreas" : [],
+      "excludedAreas" : ["area8"],
       "wrongColors" : ["0x0000ff"]
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "id" : "flag147",
-      "country": "Tongo",
+      "country": "Togo",
       "correctColors": [
         { "area1": "0x1b8514" },
         { "area2": "0xfee132" },
@@ -549,7 +549,7 @@
         { "area2": "0xca2e3f" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0x0000ff", "0x000000", "0xffff00", "0xffff00"]
+      "wrongColors" : ["0x0000ff", "0x000000", "0x674abc", "0xffff00"]
     },
     {
       "id" : "flag111",
@@ -560,7 +560,7 @@
         { "area3": "0xffffff" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0x0000ff", "0x0e810e", "0xffff00"]
+      "wrongColors" : ["0x000022", "0x0e810e", "0xffff00"]
     },
     {
       "id" : "flag110",
@@ -742,7 +742,7 @@
         { "area3": "0xe72b3e" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0x0000ff", "0xff9300", "0xff9300" ]
+      "wrongColors" : ["0x0000ff", "0x6f460d", "0x06877d" ]
     },
     {
       "id" : "flag94",
@@ -939,7 +939,7 @@
         { "area3": "0xeb1c2a" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0x0000ff", "0x000000", "0xff00ff", "0x00ff00"]
+      "wrongColors" : ["0x8d4514", "0x000000", "0x0000ff", "0x00ff00"]
     },
     {
       "id" : "flag76",
@@ -950,7 +950,7 @@
         { "area3": "0x94363a" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0x0000ff", "0xffff00", "0xffff00", "0x00ffff"]
+      "wrongColors" : ["0x0000ff", "0xffff00", "0xff3400", "0x00ffff"]
     },
     {
       "id" : "flag75",
@@ -1316,7 +1316,7 @@
         { "area4": "0x1175cb" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0xff0000", "0x135305", "0xffff00"]
+      "wrongColors" : ["0xffff00", "0x000000"]
     },
     {
       "id" : "flag43",
@@ -1686,7 +1686,7 @@
         {  "area3": "0x03297c" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0x12843e", "0x000000", "0x8f1e97", "0x8f1e97"]
+      "wrongColors" : ["0x12843e", "0x000000", "0x8f1e97", "0xff11333"]
     },
     {
       "id" : "flag11",
@@ -1785,7 +1785,7 @@
         { "area2": "0x000000" }
       ],
       "excludedAreas" : [],
-      "wrongColors" : ["0x00ff00", "0x0f1c86", "0xffffff", "0x00ff00"]
+      "wrongColors" : ["0x8e03da", "0x0f1c86", "0xffffff", "0x00ff00"]
     },
     {
       "id" : "flag02",

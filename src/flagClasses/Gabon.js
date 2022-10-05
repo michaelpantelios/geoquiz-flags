@@ -1,17 +1,12 @@
 import * as PIXI from "pixi.js"
 import {Utils} from "../Utils";
+import {FlagBaseClass} from "../FlagBaseClass";
 
-export class Gabon extends PIXI.Container{
+export class Gabon extends FlagBaseClass{
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this._areaWidth = this._flagWidth * 0.33;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        this._areaHeight = this._flagHeight * 0.33;
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -55,35 +50,35 @@ export class Gabon extends PIXI.Container{
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
                 this.area1.clear();
                 this.area1.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
-                this.area1.drawRect(0, 0, this._areaWidth,  this._flagHeight);
+                this.area1.drawRect(0, 0, this._flagWidth, this._areaHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
                 this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
-                this.area2.drawRect(this._areaWidth, 0, this._areaWidth, this._flagHeight);
+                this.area2.drawRect(0, this._areaHeight, this._flagWidth, this._areaHeight);
                 this.area2.endFill();
                 break;
             case this.area3.name:
                 this.area3.clear();
                 this.area3.lineStyle(this._lineWidth, 0x000000, 1);
                 this.area3.beginFill(color);
-                this.area3.drawRect(2 * this._areaWidth, 0, this._areaWidth, this._flagHeight);
+                this.area3.drawRect(0, 2 * this._areaHeight, this._flagWidth, this._areaHeight);
                 this.area3.endFill();
                 break;
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 
 
 }

@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import bosnia_emblem from "../assets/images/flagSpecials/bosniaherzegovina/bosniaherzegovina_emblem.png";
 
-export class Bosniaherzegovina extends PIXI.Container {
+export class Bosniaherzegovina extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this._area3Width = 0.5 * this._flagWidth;
         this._area3X = 0.26 * this._flagWidth;
@@ -64,11 +57,13 @@ export class Bosniaherzegovina extends PIXI.Container {
     getColorsForPickers(){
         return [
             this.area1Color,
-            this.area2Color
+            this.area3Color
         ].concat(this.wrongColors);
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -100,8 +95,6 @@ export class Bosniaherzegovina extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 
 }

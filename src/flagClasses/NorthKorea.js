@@ -1,18 +1,13 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import northkorea_emblem from "../assets/images/flagSpecials/northkorea/northkorea_emblem.png";
 
-export class NorthKorea extends PIXI.Container {
+export class NorthKorea extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+      
 
         this.area1Height = 0.18 * this._flagHeight;
         this.area2Height = 0.639 * this._flagHeight;
@@ -77,6 +72,8 @@ export class NorthKorea extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         switch(name){
             case this.area1.name:
                 this.area1.clear();
@@ -111,7 +108,5 @@ export class NorthKorea extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 }

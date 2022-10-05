@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js"
 import {Utils} from "../Utils";
 import burundi_bi from "../assets/images/flagSpecials/burundi/burundi_bi.png";
+import {FlagBaseClass} from "../FlagBaseClass";
 
-export class Burundi extends PIXI.Container {
+export class Burundi extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this.point0 = new PIXI.Point(0,0.01 * this._flagHeight);
         this.point1 = new PIXI.Point(0.34 * this._flagWidth, 0.28 * this._flagHeight);
@@ -103,6 +96,7 @@ export class Burundi extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -184,7 +178,5 @@ export class Burundi extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 }

@@ -1,18 +1,13 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import mozambique_emblem from "../assets/images/flagSpecials/mozambique/mozambique_mz.png";
 
-export class Mozambique extends PIXI.Container {
+export class Mozambique extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._scale = parseFloat(data.scale.toString());
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+       
 
         this._area1Height = 0.31 * this._flagHeight; // height of cyan areas
         this._area2Height = 0.38 * this._flagHeight; // white, non interactive
@@ -94,6 +89,7 @@ export class Mozambique extends PIXI.Container {
     }
 
     paintFlagArea(name, color) {
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -136,7 +132,5 @@ export class Mozambique extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 }

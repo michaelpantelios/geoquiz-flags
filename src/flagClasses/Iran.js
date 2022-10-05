@@ -1,21 +1,14 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import iran_emblem from "../assets/images/flagSpecials/iran/iran_emblem.png";
 import ribbon from "../assets/images/flagSpecials/iran/ribbon.png";
 
-export class Iran extends PIXI.Container {
+export class Iran extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._areaHeight = this._flagHeight * 0.333;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
-
+       
         this._area1Height = 0.27 * this._flagHeight;
         this._area2Height = 0.45 * this._flagHeight;
 
@@ -136,8 +129,6 @@ export class Iran extends PIXI.Container {
         ].concat(this.wrongColors);
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 
 }

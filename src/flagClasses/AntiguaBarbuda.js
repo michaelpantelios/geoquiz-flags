@@ -1,19 +1,12 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import '@pixi/graphics-extras';
 import {Utils} from "../Utils";
 import antiguabarbuda from "../assets/images/flagSpecials/antiguabarbuda/antiguabarbuda_emblem.png";
 
-export class AntiguaBarbuda extends PIXI.Container {
+export class AntiguaBarbuda extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = data.width;
-        this._flagHeight = data.height;
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this._scale = parseFloat(data.scale.toString());
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -90,7 +83,7 @@ export class AntiguaBarbuda extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
-        // return;
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -136,9 +129,5 @@ export class AntiguaBarbuda extends PIXI.Container {
                 this.area5.endFill();
                 break;
         }
-    }
-
-    getFlagCountryName(){
-        return this._flagData["country"];
     }
 }

@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import tongo_emblem from "../assets/images/flagSpecials/tongo/togo_emblem.png";
 
-export class Tongo extends PIXI.Container {
+export class Togo extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this.area1Height = this._flagHeight * 0.20;
         this.area6Width = 0.44 * this._flagWidth;
@@ -95,6 +88,7 @@ export class Tongo extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -134,10 +128,10 @@ export class Tongo extends PIXI.Container {
                 break;
             case this.area6.name:
                 this.area6.clear();
-                this.area5.lineStyle(this._lineWidth, 0x000000, 1);
-                this.area5.beginFill(color);
-                this.area5.drawRect(0, 0, this.area6Width, this.area6Height);
-                this.area5.endFill();
+                this.area6.lineStyle(this._lineWidth, 0x000000, 1);
+                this.area6.beginFill(color);
+                this.area6.drawRect(0, 0, this.area6Width, this.area6Height);
+                this.area6.endFill();
                 break;
         }
     }
@@ -151,8 +145,6 @@ export class Tongo extends PIXI.Container {
         ].concat(this.wrongColors);
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 
 }

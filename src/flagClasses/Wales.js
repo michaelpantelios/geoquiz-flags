@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js"
 import {Utils} from "../Utils";
 import wales_emblem from "../assets/images/flagSpecials/wales/wales_emblem.png";
+import {FlagBaseClass} from "../FlagBaseClass";
 
-export class Wales extends PIXI.Container {
+export class Wales extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -56,6 +49,7 @@ export class Wales extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -75,7 +69,5 @@ export class Wales extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 }

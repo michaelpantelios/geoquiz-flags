@@ -1,19 +1,12 @@
 import * as PIXI from "pixi.js"
 import {Utils} from "../Utils";
 import guatemala_emblem from "../assets/images/flagSpecials/guatemala/guatemala_emblem.png";
+import {FlagBaseClass} from "../FlagBaseClass";
 
-export class Guatemala extends PIXI.Container{
+export class Guatemala extends FlagBaseClass{
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
+        super(data);
         this._areaWidth = this._flagWidth * 0.33;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -66,6 +59,8 @@ export class Guatemala extends PIXI.Container{
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -92,9 +87,7 @@ export class Guatemala extends PIXI.Container{
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 
 
 }

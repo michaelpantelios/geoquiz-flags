@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import zimbabwe_emblem from "../assets/images/flagSpecials/zimbabwe/zimbabwe_emblem.png";
 
-export class Zimbabwe extends PIXI.Container {
+export class Zimbabwe extends FlagBaseClass {
     constructor(data){
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this.stripeHeight = 0.1426 * this._flagHeight;
         this.area8_1_x = 0.02 * this._flagWidth;
@@ -131,6 +124,7 @@ export class Zimbabwe extends PIXI.Container {
     }
 
     paintFlagArea(name, color) {
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -207,7 +201,5 @@ export class Zimbabwe extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

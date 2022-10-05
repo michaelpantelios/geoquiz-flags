@@ -19,7 +19,7 @@ export class Afghanistan extends FlagBaseClass {
         this.area1.name = "area1";
         this.addChild(this.area1);
         this.paintFlagArea(this.area1.name, this._solved ? this.area1Color : 0xbbbbbb);
-        this.area1.on("pointertap", () =>{
+        this.area1.on("pointertap", () => {
             this.emit(Utils.FLAG_AREA_PICKED, this.area1.name);
         })
 
@@ -28,7 +28,7 @@ export class Afghanistan extends FlagBaseClass {
         this.area2.name = "area2";
         this.addChild(this.area2);
         this.paintFlagArea(this.area2.name, this._solved ? this.area2Color : 0xbbbbbb)
-        this.area2.on("pointertap", () =>{
+        this.area2.on("pointertap", () => {
             this.emit(Utils.FLAG_AREA_PICKED, this.area2.name);
         });
 
@@ -37,7 +37,7 @@ export class Afghanistan extends FlagBaseClass {
         this.area3.name = "area3";
         this.addChild(this.area3);
         this.paintFlagArea(this.area3.name, this._solved ? this.area3Color : 0xbbbbbb)
-        this.area3.on("pointertap", () =>{
+        this.area3.on("pointertap", () => {
             this.emit(Utils.FLAG_AREA_PICKED, this.area3.name);
         });
 
@@ -45,14 +45,14 @@ export class Afghanistan extends FlagBaseClass {
         this.area4.visible = false;
         this.area4.scale.set(this._scale);
         this.addChild(this.area4);
-        setTimeout(()=>{
+        setTimeout(() => {
             this.area4.x = this._flagWidth / 2 - this.area4.width / 2;
             this.area4.y = this._flagHeight / 2 - this.area4.height / 2;
             this.area4.visible = true;
         }, 1000);
     }
 
-    getColorsForPickers(){
+    getColorsForPickers() {
         return [
             this.area1Color,
             this.area2Color,
@@ -60,19 +60,20 @@ export class Afghanistan extends FlagBaseClass {
         ].concat(this.wrongColors);
     }
 
-    paintFlagArea(name, color){
+    paintFlagArea(name, color) {
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
-        switch(name){
+        switch (name) {
             case this.area1.name:
                 this.area1.clear();
-                this.area1.lineStyle( this._lineWidth, 0x000000, 1);
+                this.area1.lineStyle(this._lineWidth, 0x000000, 1);
                 this.area1.beginFill(color);
-                this.area1.drawRect(0, 0, this._areaWidth,  this._flagHeight);
+                this.area1.drawRect(0, 0, this._areaWidth, this._flagHeight);
                 this.area1.endFill();
                 break;
             case this.area2.name:
                 this.area2.clear();
-                this.area2.lineStyle( this._lineWidth, 0x000000, 1);
+                this.area2.lineStyle(this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
                 this.area2.drawRect(this._areaWidth, 0, this._areaWidth, this._flagHeight);
                 this.area2.endFill();
@@ -85,13 +86,7 @@ export class Afghanistan extends FlagBaseClass {
                 this.area3.endFill();
                 break;
         }
-        this._userSolution[name] = this.toHexString(color);
+
     }
 
-    toHexString(n) {
-        if(n < 0) {
-            n = 0xFFFFFFFF + n + 1;
-        }
-        return "0x" + ("000000" + n.toString(16).toUpperCase()).substr(-6);
-    }
 }

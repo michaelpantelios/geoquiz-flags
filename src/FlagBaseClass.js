@@ -12,18 +12,20 @@ export class FlagBaseClass extends PIXI.Container {
         this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
         this._userSolution = {};//data.flagData["correctColors"];
         this._flagData["correctColors"].forEach((item) => {
-            console.log("item: ", item);
+            // console.log("item: ", item);
             let areas = Object.keys(item);
             areas.forEach((key) => {
                 this._userSolution[key]= "0xbbbbbb";
             })
         })
 
-        console.log("userSolution:",this._userSolution);
+        // console.log("userSolution:",this._userSolution);
     }
 
     getColorsForPickers(){ return []; };
-    paintFlagArea(){};
+    paintFlagArea(name, color){
+        this._userSolution[name] = color.toString();
+    };
     getFlagCountryName(){  return this._flagData["country"]; };
     getUserSolution(){ return this._userSolution;};
 }

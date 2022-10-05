@@ -1,10 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import burkinafaso_emblem from "../assets/images/flagSpecials/burkinafaso/burkinafaso_emblem.png";
 
-export class BurkinaFaso extends PIXI.Container{
+export class BurkinaFaso extends FlagBaseClass{
     constructor(data) {
-        super();
+        super(data);
 
         this._flagWidth = data.width;
         this._flagHeight = data.height;
@@ -55,6 +56,7 @@ export class BurkinaFaso extends PIXI.Container{
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -74,7 +76,5 @@ export class BurkinaFaso extends PIXI.Container{
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

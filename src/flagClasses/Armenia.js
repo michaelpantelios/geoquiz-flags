@@ -1,17 +1,12 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 
-export class Armenia extends PIXI.Container {
+export class Armenia extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = data.width;
-        this._flagHeight = data.height;
-        this._solved = data.solved;
-        this._lineWidth = data.lineWidth;
-        this._flagData = data.flagData;
         this._areaHeight = this._flagHeight * 0.333;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -55,6 +50,7 @@ export class Armenia extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -81,8 +77,6 @@ export class Armenia extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }
 

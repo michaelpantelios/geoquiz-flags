@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import brunei_emblem from "../assets/images/flagSpecials/brunei/brunei_emblem.png";
 
-export class Brunei extends PIXI.Container {
+export class Brunei extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this._area1_0_y = 0.04 * this._flagHeight;
         this._area1_1_y = 0.49 * this._flagHeight;
@@ -86,6 +79,7 @@ export class Brunei extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -112,14 +106,14 @@ export class Brunei extends PIXI.Container {
                 break;
             case this.area3.name:
                 this.area3.clear();
-                this.area2.lineStyle( this._lineWidth, 0x000000, 1);
-                this.area2.beginFill(color);
-                this.area2.moveTo(0, this._area1_0_y);
-                this.area2.lineTo(this._flagWidth, this._area1_1_y);
-                this.area2.lineTo(this._flagWidth, this._area1_2_y);
-                this.area2.lineTo(0,this._area1_3_y);
-                this.area2.closePath();
-                this.area2.endFill();
+                this.area3.lineStyle( this._lineWidth, 0x000000, 1);
+                this.area3.beginFill(color);
+                this.area3.moveTo(0, this._area1_0_y);
+                this.area3.lineTo(this._flagWidth, this._area1_1_y);
+                this.area3.lineTo(this._flagWidth, this._area1_2_y);
+                this.area3.lineTo(0,this._area1_3_y);
+                this.area3.closePath();
+                this.area3.endFill();
                 break;
             case this.area4.name:
                 this.area4.clear();
@@ -135,8 +129,6 @@ export class Brunei extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 
 }

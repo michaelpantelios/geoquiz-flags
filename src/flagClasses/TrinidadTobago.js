@@ -1,17 +1,12 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 
-export class TrinidadTobago extends PIXI.Container {
+export class TrinidadTobago extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+      
 
         this.area3_0 = new PIXI.Point(0.27 * this._flagWidth,0);
         this.area3_1 = new PIXI.Point(this._flagWidth,0.89 * this._flagHeight);
@@ -75,6 +70,7 @@ export class TrinidadTobago extends PIXI.Container {
 
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -125,7 +121,5 @@ export class TrinidadTobago extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

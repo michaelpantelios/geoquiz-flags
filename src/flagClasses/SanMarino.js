@@ -1,18 +1,13 @@
 import * as PIXI from "pixi.js"
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import sanmarino_emblem from "../assets/images/flagSpecials/sanmarino/sanmarino_emblem.png";
 
-export class SanMarino extends PIXI.Container {
+export class SanMarino extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+      
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -56,6 +51,8 @@ export class SanMarino extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -75,7 +72,5 @@ export class SanMarino extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

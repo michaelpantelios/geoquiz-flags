@@ -1,18 +1,13 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import mauritania_emblem from "../assets/images/flagSpecials/mauritania/mauritania_emblem.png";
 
-export class Mauritania extends PIXI.Container {
+export class Mauritania extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+      
 
         this.area1Height = 0.2 * this._flagHeight;
         this.area2Height = 0.6 * this._flagHeight;
@@ -61,6 +56,8 @@ export class Mauritania extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -95,8 +92,6 @@ export class Mauritania extends PIXI.Container {
         ].concat(this.wrongColors);
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 
 }

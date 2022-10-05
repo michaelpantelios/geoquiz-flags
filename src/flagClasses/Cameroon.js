@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js"
 import {Utils} from "../Utils";
 import cameroon_emblem from "../assets/images/flagSpecials/cameroon/cameroon_emblem.png";
+import {FlagBaseClass} from "../FlagBaseClass";
 
-export class Cameroon extends PIXI.Container{
+export class Cameroon extends FlagBaseClass{
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this._areaWidth = this._flagWidth * 0.33;
 
@@ -68,6 +61,7 @@ export class Cameroon extends PIXI.Container{
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -94,9 +88,7 @@ export class Cameroon extends PIXI.Container{
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 
 
 }

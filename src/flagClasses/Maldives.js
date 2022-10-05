@@ -1,10 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import maldives_emblem from "../assets/images/flagSpecials/maldives/maldives_emblem.png";
 
-export class Maldives extends PIXI.Container {
+export class Maldives extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
         this._flagWidth = data.width;
         this._flagHeight = data.height;
@@ -60,6 +61,8 @@ export class Maldives extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -79,8 +82,6 @@ export class Maldives extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 
 }

@@ -1,20 +1,14 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import spain_emblem from "../assets/images/flagSpecials/spain/spain_emblem.png";
 
-export class Spain extends PIXI.Container {
+export class Spain extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
         this._area1Height = this._flagHeight * 0.25;
         this._area2Height = this._flagHeight * 0.5;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         this.emblemX = 0.1754 * this._flagWidth;
         this.emblemY = 0.2583 * this._flagHeight;
@@ -70,6 +64,7 @@ export class Spain extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -96,8 +91,6 @@ export class Spain extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 
 }

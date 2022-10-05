@@ -1,23 +1,16 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import kenya_emblem from "../assets/images/flagSpecials/kenya/kenya_emblem.png";
 
-export class Kenya extends PIXI.Container {
+export class Kenya extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._scale = parseFloat(data.scale.toString());
-        this._lineWidth = data.lineWidth;
         this._area1Height = 0.2775 * this._flagHeight;
         this._area2Height = 0.44 * this._flagHeight;
         this._area4Height = 0.2967 * this._flagHeight;
         this._area4Y = 0.353 * this._flagHeight;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -77,6 +70,7 @@ export class Kenya extends PIXI.Container {
     }
 
     paintFlagArea(name, color) {
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -110,7 +104,5 @@ export class Kenya extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

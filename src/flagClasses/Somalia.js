@@ -1,16 +1,12 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 
-export class Somalia extends PIXI.Container {
+export class Somalia extends FlagBaseClass {
     constructor(data) {
-        super();
+        super(data);
 
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+    
 
         this.star1 = new PIXI.Point(0.5 * this._flagWidth, 0.258 * this._flagHeight);
         this.star2 = new PIXI.Point(0.539 * this._flagWidth, 0.425 * this._flagHeight);
@@ -55,6 +51,8 @@ export class Somalia extends PIXI.Container {
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
+
         // console.log(`paint area ${name} with color: ${color}`);
         switch(name){
             case this.area1.name:
@@ -84,7 +82,5 @@ export class Somalia extends PIXI.Container {
         }
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+  
 }

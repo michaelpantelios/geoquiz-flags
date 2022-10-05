@@ -1,18 +1,11 @@
 import * as PIXI from "pixi.js";
+import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import dominican_emblem from "../assets/images/flagSpecials/dominicanrepublic/dominicanrepublic_emblem.png"
 
-export class DominicanDemocracy extends PIXI.Container {
+export class DominicanDemocracy extends FlagBaseClass {
     constructor(data) {
-        super();
-
-        this._flagWidth = parseInt(data.width.toString());
-        this._flagHeight = parseInt(data.height.toString());
-        this._scale = parseFloat(data.scale.toString());
-        this._solved = data.solved;
-        this._flagData = data.flagData;
-        this._lineWidth = data.lineWidth;
-        this.wrongColors = this._flagData.wrongColors.map( item => { return parseInt(item); } );
+        super(data);
 
         this.area1Width = 0.429 * this._flagWidth;
         this.area1Height = 0.40 * this._flagHeight;
@@ -71,18 +64,19 @@ export class DominicanDemocracy extends PIXI.Container {
             this.emit(Utils.FLAG_AREA_PICKED, this.area5.name);
         });
 
-        this.area4 = new PIXI.Sprite.from(dominican_emblem);
-        this.area4.visible = false;
-        this.area4.scale.set(this._scale);
-        this.addChild(this.area4);
+        this.area6 = new PIXI.Sprite.from(dominican_emblem);
+        this.area6.visible = false;
+        this.area6.scale.set(this._scale);
+        this.addChild(this.area6);
         setTimeout(()=>{
-            this.area4.x = this._flagWidth / 2 - this.area4.width / 2;
-            this.area4.y = this._flagHeight / 2 - this.area4.height / 2;
-            this.area4.visible = true;
+            this.area6.x = this._flagWidth / 2 - this.area6.width / 2;
+            this.area6.y = this._flagHeight / 2 - this.area6.height / 2;
+            this.area6.visible = true;
         }, 1000);
     }
 
     paintFlagArea(name, color){
+        super.paintFlagArea(name, color);
         switch(name){
             case this.area1.name:
                 this.area1.clear();
@@ -146,7 +140,5 @@ export class DominicanDemocracy extends PIXI.Container {
         ].concat(this.wrongColors);
     }
 
-    getFlagCountryName(){
-        return this._flagData["country"];
-    }
+
 }

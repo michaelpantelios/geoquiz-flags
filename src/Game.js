@@ -152,7 +152,7 @@ import {Tajikistan} from "./flagClasses/Tajikistan";
 import {Tanzania} from "./flagClasses/Tanzania";
 import {Thailand} from "./flagClasses/Thailand";
 import {TimorLeste} from "./flagClasses/TimorLeste";
-import {Tongo} from "./flagClasses/Tongo";
+import {Togo} from "./flagClasses/Togo";
 import {TrinidadTobago} from "./flagClasses/TrinidadTobago";
 import {UnitedArabEmirates} from "./flagClasses/UnitedArabEmirates";
 import {Uganda} from "./flagClasses/Uganda";
@@ -168,8 +168,10 @@ import {Wales} from "./flagClasses/Wales";
 
 
 export class Game extends PIXI.Container {
-    static get  FLAG_WIDTH() {  return 2388; }
-    static get  FLAG_HEIGHT() { return 1668; }
+    static get FLAG_WIDTH() {  return 2388; }
+    static get FLAG_HEIGHT() { return 1668; }
+    static get AREA_HIT_POINTS() { return 1;}
+    static get COLOR_HIT_POINTS() { return 0.6; }
 
     constructor(data) {
         super();
@@ -179,7 +181,7 @@ export class Game extends PIXI.Container {
         this._appWidth = data.appWidth;
         this._country = data.country;
 
-        let pickedColor = 0xbbbbbb;
+        this._pickedColor = 0xbbbbbb;
         this._currentFlagIndex = 0;
         this._currentFlag = {};
         this._flagsArray = [];
@@ -195,7 +197,7 @@ export class Game extends PIXI.Container {
         this.colorPickers.x = document.documentElement.clientWidth / 2 - this.colorPickers.width  / 2;
         this.colorPickers.y = nextY;
         this.colorPickers.on(ColorPickersBar.COLOR_PICKED, (color)=>{
-            pickedColor = color;
+            this._pickedColor = color;
             // console.log(`picked color: ${pickedColor}`);
         })
         this.colorPickers.visible = !solved;
@@ -654,8 +656,8 @@ export class Game extends PIXI.Container {
                 case "East Timor":
                     flag = new TimorLeste(data);
                     break;
-                case "Tongo":
-                    flag = new Tongo(data);
+                case "Togo":
+                    flag = new Togo(data);
                     break;
                 case "Trinidad and Tobago":
                     flag = new TrinidadTobago(data);
@@ -701,7 +703,7 @@ export class Game extends PIXI.Container {
             this.addChild(flag);
             flag.on(Utils.FLAG_AREA_PICKED, (areaName) => {
                 if (!solved)
-                    flag.paintFlagArea(areaName, pickedColor)
+                    flag.paintFlagArea(areaName, this._pickedColor)
             });
 
             this._flagsArray.push(flag);
@@ -748,10 +750,10 @@ export class Game extends PIXI.Container {
 
         nextY += btnSubmit.height + 20;
 
-        let result = new Result({"width" : this._appWidth, "height" : 200})
-        result.x = this._pager.x;
-        result.y = nextY;
-        this.addChild(result);
+        this.result = new Result({"width" : this._appWidth, "height" : 50})
+        this.result.x = this._pager.x;
+        this.result.y = nextY;
+        this.addChild(this.result);
 
         if (this._country !== ""){
             let _index = _.findIndex(this._flagsArray, x => x.getFlagCountryName().toString().toLowerCase().includes(this._country.toString().toLowerCase()));
@@ -768,24 +770,68 @@ export class Game extends PIXI.Container {
         console.log("lets see !! ")
         console.log(this._currentFlag.getFlagCountryName());
         console.log(this._currentFlag.getUserSolution());
-        let correctFlagData = this._allFlagsData[this._currentFlagIndex]["correctColors"];
+
+        let correctFlagData = {};
+        let correctFlagColors = this._allFlagsData[this._currentFlagIndex]["correctColors"];
+
+        correctFlagColors.forEach((area)=>{
+            let correctAreaIds = Object.keys(area);
+            correctAreaIds.forEach((areaId)=>{
+               correctFlagData[areaId]= parseInt(area[areaId].toString()).toString();
+            });
+        });
+
+        let excludedAreas = this._allFlagsData[this._currentFlagIndex]["excludedAreas"];
+        let activeAreasNum = this._allFlagsData[this._currentFlagIndex]["correctColors"].length - excludedAreas.length;
+
         console.log("correctFlagData = ", correctFlagData);
+
+        console.log("userSolution = ",this._currentFlag.getUserSolution());
+
         let userSolution = this._currentFlag.getUserSolution();
-        userSolution.forEach((item)=>{
-            let areas = Object.keys(item);
-            areas.forEach((key) => {
-                this._userSolution[key]= "0xbbbbbb";
-            })
+
+        let correctColorPoints = 0;
+        let correctColorAndAreaPoints = 0;
+        let colorsFound = [];
+
+        let points = {};
+
+        let areaIds = Object.keys(userSolution);
+        areaIds.forEach((areaId) => {
+          if (!excludedAreas.includes(areaId)) {
+              let areaColor = userSolution[areaId];
+              if (correctFlagData[areaId] === areaColor){
+                points[areaId] = Game.AREA_HIT_POINTS;
+              } else {
+                  points[areaId] = 0;
+                  let correctAreaIds = Object.keys(correctFlagData);
+                  correctAreaIds.forEach((correctAreaId) => {
+                      if (correctFlagData[correctAreaId] === areaColor){
+                          //hooray, one correct color
+                          points[areaId] = Game.COLOR_HIT_POINTS;
+                      }
+                  });
+              }
+          }
+        });
+
+        let finalPoints = 0;
+        let resultString = "( (";
+        let pointAreaIds = Object.keys(points);
+        pointAreaIds.forEach((areaId,index) =>{
+            finalPoints += points[areaId];
+            resultString+=`${areaId}.points: ${points[areaId]}`;
+            if (index < pointAreaIds.length - 1)
+                resultString +=" + ";
+            else resultString += ")";
         })
 
-        // this._flagData["correctColors"].forEach((item) => {
-        //     console.log("item: ", item);
-        //     let areas = Object.keys(item);
-        //     areas.forEach((key) => {
-        //         this._userSolution[key]= "0xbbbbbb";
-        //     })
-        // })
+        finalPoints /= activeAreasNum;
+        finalPoints = Math.round(finalPoints * 100);
 
+        resultString += ` / ${activeAreasNum} ) * 100 = ${finalPoints}`;
+
+        this.result.setResultText(resultString);
 
     }
 
@@ -802,6 +848,7 @@ export class Game extends PIXI.Container {
                 flag.visible = false;
             }
         }
+        this._pickedColor = 0xbbbbbb;
         this.colorPickers.setColors(this._flagsArray[this._currentFlagIndex].getColorsForPickers());
         this._pager.setCountryName(this._allFlagsData[this._currentFlagIndex]["country"]);
     }
