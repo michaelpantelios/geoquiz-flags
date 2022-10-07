@@ -1,6 +1,19 @@
 {
   "flags" : [
     {
+      "id" : "flag160",
+      "country": "Georgia",
+      "correctColors": [
+        { "area1": "0xffffff" },
+        { "area2": "0xffffff" },
+        { "area3": "0xffffff" },
+        { "area4": "0xffffff" },
+        { "area5": "0xff0000" }
+      ],
+      "excludedAreas" : [],
+      "wrongColors" : ["0x000000", "0x9e0e9e", "0xffff00", "0x0000ff"]
+    },
+    {
       "id" : "flag159",
       "country": "Wales",
       "correctColors": [

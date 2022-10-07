@@ -1,16 +1,16 @@
 import * as PIXI from "pixi.js";
 import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
+import georgia_emblem from "../assets/images/flagSpecials/georgia/georgia_emblem.png";
 
-export class Sweden extends FlagBaseClass {
+export class Georgia extends FlagBaseClass {
     constructor(data) {
         super(data);
 
-        this.area1Width = 0.2865 * this._flagWidth;
-        this.area1Height = 0.3992 * this._flagHeight;
-        this.area2Width = 0.5695 * this._flagWidth;
-        this.area5Width = 0.1436 * this._flagWidth;
-        this.area5Height = 0.202 * this._flagHeight;
+        this.area1Width = 0.43 * this._flagWidth;
+        this.area1Height = 0.4 * this._flagHeight;
+        this.area5Width = 0.14 * this._flagWidth;
+        this.area5Height = 0.2 * this._flagHeight;
 
         //correct colors
         this.area1Color = parseInt(this._flagData["correctColors"][0]["area1"]);
@@ -63,6 +63,16 @@ export class Sweden extends FlagBaseClass {
         this.area5.on("pointertap", () =>{
             this.emit(Utils.FLAG_AREA_PICKED, this.area5.name);
         });
+
+        this.area6 = new PIXI.Sprite.from(georgia_emblem);
+        this.area6.scale.set(this._scale);
+        this.area6.visible = false;
+        this.addChild(this.area6);
+        setTimeout(()=>{
+            this.area6.x = this._flagWidth / 2 - this.area6.width / 2;
+            this.area6.y = this._flagHeight / 2 - this.area6.height / 2;
+            this.area6.visible = true;
+        }, 1000);
     }
 
     getColorsForPickers(){
@@ -87,7 +97,7 @@ export class Sweden extends FlagBaseClass {
                 this.area2.clear();
                 this.area2.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area2.beginFill(color);
-                this.area2.drawRect(0, 0, this.area2Width, this.area1Height);
+                this.area2.drawRect(0, 0, this.area1Width, this.area1Height);
                 this.area2.endFill();
                 this.area2.x = this.area1Width + this.area5Width;
                 break;
@@ -103,7 +113,7 @@ export class Sweden extends FlagBaseClass {
                 this.area4.clear();
                 this.area4.lineStyle( this._lineWidth, 0x000000, 1);
                 this.area4.beginFill(color);
-                this.area4.drawRect(0, 0, this.area2Width, this.area1Height);
+                this.area4.drawRect(0, 0, this.area1Width, this.area1Height);
                 this.area4.endFill();
                 this.area4.x = this.area1Width + this.area5Width;
                 this.area4.y = this.area1Height + this.area5Height;
@@ -130,5 +140,5 @@ export class Sweden extends FlagBaseClass {
         }
     }
 
-  
+
 }

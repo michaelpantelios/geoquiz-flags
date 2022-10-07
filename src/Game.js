@@ -3,7 +3,7 @@ const _ = require("lodash");
 import {ColorPickersBar} from "./ColorPickersBar";
 import {Pager} from "./Pager";
 import {Result} from "./Result";
-import flagsData from "./assets/data/flagColors.json"
+import flagsData from "./assets/data/flagsData.json"
 import {Utils} from "./Utils";
 //flag classes
 import {Armenia} from "./flagClasses/Armenia.js";
@@ -165,6 +165,7 @@ import {Yemen} from "./flagClasses/Yemen";
 import {Zimbabwe} from "./flagClasses/Zimbabwe";
 import {Scotland} from "./flagClasses/Scotland";
 import {Wales} from "./flagClasses/Wales";
+import {Georgia} from "./flagClasses/Georgia";
 
 
 export class Game extends PIXI.Container {
@@ -694,6 +695,9 @@ export class Game extends PIXI.Container {
                     break;
                 case "Wales":
                     flag = new Wales(data);
+                    break;
+                case "Georgia":
+                    flag = new Georgia(data);
                     break;
             }
 

@@ -2,7 +2,7 @@ import * as PIXI from "pixi.js";
 import {FlagBaseClass} from "../FlagBaseClass";
 import {Utils} from "../Utils";
 import iran_emblem from "../assets/images/flagSpecials/iran/iran_emblem.png";
-import ribbon from "../assets/images/flagSpecials/iran/ribbon.png";
+import ribbon from "../assets/images/flagSpecials/iran/iran_ribbon.png";
 
 export class Iran extends FlagBaseClass {
     constructor(data) {
